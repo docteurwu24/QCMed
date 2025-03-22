@@ -1,0 +1,15 @@
+#:kivy 2.0.0
+
+<HomeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Spinner:
+            id: theme_spinner
+            text: 'Choisir un thème'
+            values: []  # Les valeurs seront ajoutées dynamiquement dans Python
+            size_hint_y: None
+            height: '48dp'
+        Button:
+            id: start_button
+            text: "Démarrer"
+            on_press: root.start_game(theme_spinner.text)

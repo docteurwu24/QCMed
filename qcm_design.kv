@@ -1,0 +1,143 @@
+#:kivy 2.0.0
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+<OptionButton@Button>:
+    background_normal: ''
+    background_color: 0.2, 0.6, 0.86, 1  # Bleu par défaut
+    color: 1, 1, 1, 1  # Texte blanc
+    font_size: '18sp'
+    size_hint_y: None
+    height: '50dp'
+    canvas.before:
+        Color:
+            rgba: self.background_color if self.state == 'normal' else (0.3, 0.7, 0.96, 1)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [15, 15, 15, 15]
+
+<QuestionScreen>:
+    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.15, 0.2, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Label:
+            text: root.question_text
+            font_size: '24sp'
+            color: 1, 1, 1, 1
+            halign: 'center'
+            valign: 'middle'
+            text_size: self.width - 40, None
+            size_hint_y: None
+            height: self.texture_size[1] + 20
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height + 20
+            padding: 20
+            spacing: 10
+            canvas.before:
+                Color:
+                    rgba: 0.15, 0.22, 0.28, 1
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15, 15, 15, 15]
+
+            BoxLayout:
+                id: options_layout
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 10
+
+        Widget:
+            size_hint_y: None
+            height: 20
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: '50dp'
+            padding: 10
+            spacing: 10
+            BoxLayout:
+                id: lives_layout
+                orientation: 'horizontal'
+                size_hint_x: None
+                width: self.minimum_width
+                spacing: 5
+                canvas.before:
+                    Color:
+                        rgba: 1, 0, 0, 0.2  # Rouge transparent pour debug
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+            Label:
+                text: f"Score: {root.score}"
+                font_size: '18sp'
+                color: 1, 1, 1, 1
+            ProgressBar:
+                value: root.progress
+                max: 100
+                size_hint_x: 0.5
+
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_x: None
+                width: self.minimum_width
+                spacing: 5
+                Label:
+                    text: f"Temps restant: "
+                    font_size: '18sp'
+                    color: 1, 1, 1, 1
+                    size_hint_x: None
+                    width: self.texture_size[0]
+                Image:
+                    source: 'chrono.png'
+                    size_hint_x: None
+                    width: 45
+                Label:
+                    text: f"{root.timer_text}"
+                    font_size: '18sp'
+                    color: 1, 1, 1, 1
+                    size_hint_x: None
+                    width: self.texture_size[0]
+
+<GameOverScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.15, 0.2, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: "Fin du jeu !"
+            font_size: '36sp'
+            color: 1, 1, 1, 1
+        Label:
+            text: f"Score final: {root.final_score} sur 20"
+            font_size: '28sp'
+            color: 1, 1, 1, 1
+        Button:
+            text: "Rejouer"
+            font_size: '20sp'
+            background_color: 0.2, 0.6, 0.86, 1
+            size_hint: 0.5, None
+            height: '50dp'
+            on_press:
+                root.manager.current = 'question'
+                root.manager.get_screen('question').score = 0
+                root.manager.get_screen('question').lives = 3
+                root.manager.get_screen('question').current_question_index = 0
+                root.manager.get_screen('question').load_questions()
+                root.manager.get_screen('question').start_timer()
