@@ -1,0 +1,12 @@
+[
+    {
+        "question": "Quelles sont les capitales en Europe ?",
+        "options": ["Paris", "Florida", "Berlin", "Tokyo"],
+        "correctIndices": [0, 2]
+    },
+    {
+        "question": "Quels nombres sont pairs ?", 
+        "options": ["1", "2", "3", "4"],
+        "correctIndices": [1, 3]
+    }
+]
