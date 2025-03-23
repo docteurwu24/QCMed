@@ -1,15 +1,60 @@
 #:kivy 2.0.0
 
 <HomeScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.2, 0.3, 1  # Couleur unie (bleu foncé)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
     BoxLayout:
         orientation: 'vertical'
+        padding: 40
+        spacing: 30
+
+        Label:
+            id: welcome_label
+            text: "QCMed"
+            font_size: '36sp'
+            color: 1, 1, 1, 1
+            size_hint_y: None
+            height: '100dp'
+            bold: True
+            italic: True
+
         Spinner:
             id: theme_spinner
             text: 'Choisir un thème'
-            values: []  # Les valeurs seront ajoutées dynamiquement dans Python
-            size_hint_y: None
-            height: '48dp'
+            values: []
+            font_size: '22sp'
+            size_hint: 0.7, None
+            height: '70dp'
+            pos_hint: {'center_x': 0.5}
+            background_color: 0.2, 0.6, 0.86, 1
+            color: 1, 1, 1, 1
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.3
+                RoundedRectangle:
+                    pos: self.x - 5, self.y - 5
+                    size: self.width + 10, self.height + 10
+                    radius: [15]
+
         Button:
             id: start_button
             text: "Démarrer"
-            on_press: root.start_game(theme_spinner.text)
+            on_release: root.start_game(theme_spinner.text)
+            font_size: '24sp'
+            size_hint: 0.7, None
+            height: '70dp'
+            pos_hint: {'center_x': 0.5}
+            background_color: 0.1, 0.7, 0.3, 1
+            color: 1, 1, 1, 1
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.3
+                RoundedRectangle:
+                    pos: self.x - 5, self.y - 5
+                    size: self.width + 10, self.height + 10
+                    radius: [15]

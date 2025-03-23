@@ -1,5 +1,8 @@
 import kivy
-kivy.require('2.0.0') # Explicitly require Kivy 2.0.0
+kivy.require('2.0.0')
+
+import sys
+import os
 
 from kivy.app import App
 from kivy.uix.widget import Widget
@@ -10,11 +13,29 @@ from kivy.factory import Factory
 import json
 import random
 from kivy.clock import Clock
-from kivy.animation import Animation  # Pour l'animation
+from kivy.animation import Animation
 from kivy.uix.image import Image
 
-Builder.load_file('qcm_design.kv')
-Builder.load_file('accueil_design.kv') # Charger le fichier de design de l'écran d'accueil
+# Fonction pour obtenir le chemin correct des fichiers (dev ou .exe)
+def resource_path(relative_path):
+    """Retourne le chemin correct pour un fichier, que ce soit en mode dev ou dans un .exe."""
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
+
+# Gestion du chemin pour PyInstaller
+if getattr(sys, 'frozen', False):
+    base_path = sys._MEIPASS
+else:
+    base_path = os.path.dirname(os.path.abspath(__file__))
+
+# Charger les fichiers KV avec le chemin correct
+kv_file1 = os.path.join(base_path, 'qcm_design.kv')
+kv_file2 = os.path.join(base_path, 'accueil_design.kv')
+Builder.load_file(kv_file1)
+Builder.load_file(kv_file2)
 
 class QuestionScreen(Screen):
     question_text = StringProperty('')
@@ -23,8 +44,9 @@ class QuestionScreen(Screen):
     score = NumericProperty(0)
     lives = NumericProperty(3)
     progress = NumericProperty(0)
-    timer = NumericProperty(20)
-    timer_text = StringProperty("20")
+    timer = NumericProperty(60)
+    timer_text = StringProperty("60")
+    remaining_questions_text = StringProperty("")
 
     def __init__(self, **kwargs):
         super(QuestionScreen, self).__init__(**kwargs)
@@ -34,7 +56,7 @@ class QuestionScreen(Screen):
         self.selected_options = []  # Stocke les options sélectionnées
 
     def on_enter(self):
-        self.load_questions()
+        # self.load_questions() # Removed this line
         self.show_question()
         self.start_timer()
         self.update_lives()
@@ -42,19 +64,52 @@ class QuestionScreen(Screen):
     def update_lives(self):
         self.ids.lives_layout.clear_widgets()
         for _ in range(self.lives):
-            heart = Image(source='heart.png', size_hint_x=None, width=45)
+            heart = Image(source=resource_path('heart.png'), size_hint_x=None, width=45)
             self.ids.lives_layout.add_widget(heart)
 
-    def load_questions(self, theme_file="themes/questions.json"):
+    def load_questions(self, theme_name="questions"):
+        # Chemin pour les thèmes dans le dossier de travail courant
+        current_themes_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "themes")
+
+        # Chemin pour les thèmes inclus dans l'exécutable
+        if getattr(sys, 'frozen', False):
+            bundled_themes_path = os.path.join(sys._MEIPASS, "themes")
+        else:
+            bundled_themes_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "themes")
+
+        # Chemin pour les thèmes ajoutés par l'utilisateur
+        user_themes_path = os.path.join(os.path.dirname(sys.executable), "themes")
+
+        # Essaie d'abord le dossier de travail courant
+        theme_file = os.path.join(current_themes_path, f"{theme_name}.json")
+        if not os.path.exists(theme_file):
+            # Essaie ensuite le dossier utilisateur
+            theme_file = os.path.join(user_themes_path, f"{theme_name}.json")
+            if not os.path.exists(theme_file):
+                # Si le fichier n'est pas trouvé dans le dossier utilisateur, cherche dans les thèmes inclus
+                theme_file = os.path.join(bundled_themes_path, f"{theme_name}.json")
+
         try:
+            print(f"Loading theme file: {theme_file}")
             with open(theme_file, 'r', encoding='utf-8') as file:
                 self.questions = json.load(file)
                 random.shuffle(self.questions)
                 self.current_question_index = 0
         except FileNotFoundError:
-            print(f"Le fichier {theme_file} est introuvable !")
+            print(f"Le fichier de thème {theme_file} est introuvable ! Chargement des questions par défaut.")
+            self.load_default_questions()
         except json.JSONDecodeError:
-            print(f"Erreur de format dans {theme_file} !")
+            print(f"Erreur de format dans le fichier de thème {theme_file} est introuvable ! Chargement des questions par défaut.")
+            self.load_default_questions()
+
+    def load_default_questions(self):
+        # Define default questions here or load from a default file
+        self.questions = [
+            {"question": "Question par défaut 1?", "options": ["Oui", "Non"], "correctIndices": [0]},
+            {"question": "Question par défaut 2?", "options": ["Vrai", "Faux"], "correctIndices": [1]}
+        ]
+        random.shuffle(self.questions)
+        self.current_question_index = 0
 
     def show_question(self):
         if self.current_question_index < len(self.questions):
@@ -63,8 +118,9 @@ class QuestionScreen(Screen):
             self.options = question_data['options']
             self.correct_answers = [question_data['options'][i] for i in question_data['correctIndices']]
             self.progress = (self.current_question_index / len(self.questions)) * 100
-            self.timer = 20
-            self.timer_text = "20"
+            self.timer = 60
+            self.timer_text = "60"
+            self.remaining_questions_text = f"Il reste {len(self.questions) - self.current_question_index -1} questions"
             self.selected_options = []  # Réinitialise les sélections
             self.update_options()
         else:
@@ -87,7 +143,7 @@ class QuestionScreen(Screen):
             on_press=self.check_answer
         )
         self.ids.options_layout.add_widget(validate_button)
-        self.validate_button = validate_button # Stocke la référence
+        self.validate_button = validate_button  # Stocke la référence
 
     def toggle_selection(self, instance):
         option = instance.text
@@ -101,9 +157,9 @@ class QuestionScreen(Screen):
 
     def check_answer(self, instance):
         self.stop_timer()
-        self.ids.options_layout.remove_widget(self.validate_button) # Supprime le bouton
+        self.ids.options_layout.remove_widget(self.validate_button)  # Supprime le bouton
         # Vérifie si les réponses sélectionnées sont correctes
-        if instance is not None: # Gérer le cas où le timer expire
+        if instance is not None:  # Gérer le cas où le timer expire
             correct_answers_set = set(self.correct_answers)
             selected_options_set = set(self.selected_options)
             
@@ -125,23 +181,23 @@ class QuestionScreen(Screen):
         for button in self.ids.options_layout.children:
             if isinstance(button, Factory.OptionButton) and button.text != "Valider":
                 if button.text in self.correct_answers:
-                    button.background_color = [0, 1, 0, 1]  # Vert pour les bonnes réponses
+                    button.background_color = [0, 0.6, 0, 1]  # Vert pour les bonnes réponses
                 elif button.text in self.selected_options:
                     button.background_color = [1, 0, 0, 1]  # Rouge pour les mauvaises réponses sélectionnées
 
-        if instance is not None: # Gérer le cas où le timer expire
-          if len(set(self.selected_options).symmetric_difference(set(self.correct_answers))) != 0 :
-            self.lives -= 1
-            self.update_lives()  # Met à jour l'affichage des vies
-            # Animation de secouement pour les mauvaises réponses
-            for button in self.ids.options_layout.children:
-                if isinstance(button, Factory.OptionButton) and button.text in self.selected_options and button.text not in self.correct_answers:
-                    anim = Animation(pos_hint={'x': 0.05}, duration=0.1) + Animation(pos_hint={'x': -0.05}, duration=0.1)
-                    anim += Animation(pos_hint={'x': 0}, duration=0.1)
-                    anim.repeat = 2
-                    anim.start(button)
-            if self.lives <= 0:
-                Clock.schedule_once(lambda dt: self.show_game_over(), 1)
+        if instance is not None:  # Gérer le cas où le timer expire
+            if len(set(self.selected_options).symmetric_difference(set(self.correct_answers))) != 0:
+                self.lives -= 1
+                self.update_lives()  # Met à jour l'affichage des vies
+                # Animation de secouement pour les mauvaises réponses
+                for button in self.ids.options_layout.children:
+                    if isinstance(button, Factory.OptionButton) and button.text in self.selected_options and button.text not in self.correct_answers:
+                        anim = Animation(pos_hint={'x': 0.05}, duration=0.1) + Animation(pos_hint={'x': -0.05}, duration=0.1)
+                        anim += Animation(pos_hint={'x': 0}, duration=0.1)
+                        anim.repeat = 2
+                        anim.start(button)
+                if self.lives <= 0:
+                    Clock.schedule_once(lambda dt: self.show_game_over(), 1)
 
         # Ajout du bouton "Continuer"
         continue_button = Factory.OptionButton(
@@ -152,11 +208,10 @@ class QuestionScreen(Screen):
         )
         self.ids.options_layout.add_widget(continue_button)
 
-
     def continue_to_next_question(self, instance):
         if self.lives <= 0:
             self.show_game_over()
-        elif self.current_question_index < len(self.questions) -1:
+        elif self.current_question_index < len(self.questions) - 1:
             self.next_question()
         else:
             self.show_game_over()
@@ -193,52 +248,92 @@ class QuestionScreen(Screen):
             final_score_out_of_20 = (self.score / total_questions) * 20
         else:
             final_score_out_of_20 = 0
-        self.manager.get_screen('game_over').final_score = round(final_score_out_of_20, 2) # Arrondi à 2 décimales
+        self.manager.get_screen('game_over').final_score = round(final_score_out_of_20, 2)  # Arrondi à 2 décimales
         self.stop_timer()
-
-import os
 
 class HomeScreen(Screen):
     def on_enter(self):
         self.load_themes()
-        welcome_anim = Animation(opacity=1, duration=1, t='in_out_quad') # Modifier la courbe d'animation du titre
-        start_anim = Animation(opacity=1, duration=0.8, t='out_bounce') # Ajouter un délai et ajuster la durée
-        pulse_anim = Animation(scale_x=1.1, scale_y=1.1, duration=0.5, t='in_out_sine') + Animation(scale_x=1, scale_y=1, duration=0.5, t='in_out_sine') # Animation de pulsation avec scale_x et scale_y
-        pulse_anim.repeat = True # Répéter l'animation de pulsation
-
-        # welcome_anim.start(self.ids.welcome_label)
-        # start_anim.start(self.ids.start_button) # Commented out to avoid AttributeError
-        # pulse_anim.start(self.ids.start_button.ids.start_button_scale) # Animer l'instruction Scale du bouton
-
-        # Animation de pulsation de la couleur de fond du bouton
+        welcome_anim = Animation(opacity=1, duration=1, t='in_out_quad')
+        start_anim = Animation(opacity=1, duration=0.8, t='out_bounce')
         pulse_anim = Animation(background_color=(0.3, 0.7, 0.9, 1), duration=0.8, t='in_out_sine') + \
                      Animation(background_color=(0.2, 0.6, 0.86, 1), duration=0.8, t='in_out_sine')
         pulse_anim.repeat = True
-        pulse_anim.start(self.ids.start_button) # Démarrer l'animation sur le bouton
+
+        welcome_anim.start(self.ids.welcome_label)
+        start_anim.start(self.ids.start_button)
+        pulse_anim.start(self.ids.start_button)
 
     def load_themes(self):
-        themes_dir = "themes"
-        theme_files = [f for f in os.listdir(themes_dir) if f.endswith(".json")]
-        self.ids.theme_spinner.values = theme_files
+        # Chemin pour les thèmes inclus dans l'exécutable (PyInstaller)
+        if getattr(sys, 'frozen', False):
+            bundled_themes_path = os.path.join(sys._MEIPASS, "themes")
+        else:
+            bundled_themes_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "themes")
+
+        # Chemin pour les thèmes ajoutés par l'utilisateur (à côté de l'exécutable)
+        user_themes_path = os.path.join(os.path.dirname(sys.executable), "themes")
+
+        # Crée le dossier user_themes_path s'il n'existe pas
+        if not os.path.exists(user_themes_path):
+            os.makedirs(user_themes_path)
+
+        # Liste des fichiers JSON dans les deux dossiers
+        bundled_themes = []
+        user_themes = []
+
+        # Thèmes inclus dans l'exécutable
+        if os.path.exists(bundled_themes_path):
+            bundled_themes = [f for f in os.listdir(bundled_themes_path) if f.endswith(".json")]
+
+        # Thèmes ajoutés par l'utilisateur
+        if os.path.exists(user_themes_path):
+            user_themes = [f for f in os.listdir(user_themes_path) if f.endswith(".json")]
+
+        # Combine les deux listes et supprime les doublons
+        all_themes = list(set(bundled_themes + user_themes))
+        theme_names = [f[:-5] for f in all_themes]  # Retire l'extension .json
+        self.ids.theme_spinner.values = theme_names if theme_names else ["Aucun thème disponible"]
 
     def start_game(self, theme_file):
-        if theme_file and theme_file != 'Choisir un thème':
-            self.manager.get_screen('question').load_questions(f"themes/{theme_file}")
+        if theme_file and theme_file != 'Choisir un thème' and theme_file != 'Aucun thème disponible':
+            theme_name = theme_file # Ne pas ajouter l'extension .json
+            question_screen = self.manager.get_screen('question')
+            question_screen.load_questions(theme_name)
+            question_screen.score = 0  # Réinitialisation du score
+            question_screen.lives = 3 # Réinitialisation des vies
             self.manager.current = 'question'
         else:
             print("Veuillez choisir un thème de questions.")
 
-
 class GameOverScreen(Screen):
     final_score = NumericProperty(0)
 
+    def go_home(self):
+        self.manager.current = 'home'
+
 class QCMApp(App):
+    def resource_path(self, relative_path):
+        """Retourne le chemin correct pour un fichier, que ce soit en mode dev ou dans un .exe."""
+        if getattr(sys, 'frozen', False):
+            base_path = sys._MEIPASS
+        else:
+            base_path = os.path.dirname(os.path.abspath(__file__))
+        return os.path.join(base_path, relative_path)
+
     def build(self):
         sm = ScreenManager(transition=FadeTransition())
-        sm.add_widget(HomeScreen(name='home')) # Ajout de l'écran d'accueil
+        sm.add_widget(HomeScreen(name='home'))
         sm.add_widget(QuestionScreen(name='question'))
         sm.add_widget(GameOverScreen(name='game_over'))
-        sm.current = 'home' # Définir l'écran d'accueil comme écran initial
+        sm.current = 'home'
+        return sm
+    def build(self):
+        sm = ScreenManager(transition=FadeTransition())
+        sm.add_widget(HomeScreen(name='home'))  # Ajout de l'écran d'accueil
+        sm.add_widget(QuestionScreen(name='question'))
+        sm.add_widget(GameOverScreen(name='game_over'))
+        sm.current = 'home'  # Définir l'écran d'accueil comme écran initial
         return sm
 
 if __name__ == '__main__':

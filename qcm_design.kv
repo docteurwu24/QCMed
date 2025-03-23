@@ -1,55 +1,87 @@
-#:kivy 2.0.0
 #:import FadeTransition kivy.uix.screenmanager.FadeTransition
 
+
 <OptionButton@Button>:
+    text_size: self.width, None
+    halign: 'center'
+    shorten: True
+    shorten_from: 'right'
     background_normal: ''
-    background_color: 0.2, 0.6, 0.86, 1  # Bleu par défaut
-    color: 1, 1, 1, 1  # Texte blanc
+    background_color: 0.2, 0.6, 0.86, 1
+    color: 1, 1, 1, 1
     font_size: '18sp'
     size_hint_y: None
-    height: '50dp'
+    height: '60dp'
     canvas.before:
         Color:
-            rgba: self.background_color if self.state == 'normal' else (0.3, 0.7, 0.96, 1)
+            rgba: 0, 0, 0, 0.2 if self.state == 'normal' else 0, 0, 0, 0.4
+        RoundedRectangle:
+            pos: self.x, self.y - 5
+            size: self.size[0], self.size[1] + 10
+            radius: [15]
+        Color:
+            rgba: self.background_color
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [15, 15, 15, 15]
+    background_normal: ''
+    background_color: 0.2, 0.6, 0.86, 1
+    color: 1, 1, 1, 1
+    font_size: '18sp'
+    size_hint_y: None
+    height: '60dp'
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0.2
+        RoundedRectangle:
+            pos: self.x, self.y - 5
+            size: self.size[0], self.size[1] + 10
+            radius: [15]
+        Color:
+            rgba: self.background_color
         RoundedRectangle:
             pos: self.pos
             size: self.size
             radius: [15, 15, 15, 15]
 
 <QuestionScreen>:
-    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.2, 0.3, 1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+  
     BoxLayout:
         orientation: 'vertical'
-        canvas.before:
-            Color:
-                rgba: 0.1, 0.15, 0.2, 1
-            Rectangle:
-                pos: self.pos
-                size: self.size
+        padding: 20
+        spacing: 15
 
         Label:
             text: root.question_text
-            font_size: '24sp'
+            font_size: '26sp'
             color: 1, 1, 1, 1
             halign: 'center'
             valign: 'middle'
             text_size: self.width - 40, None
             size_hint_y: None
-            height: self.texture_size[1] + 20
+            height: self.texture_size[1] + 30
+            bold: True
 
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: None
-            height: self.minimum_height + 20
+            height: self.minimum_height + 30
             padding: 20
-            spacing: 10
+            spacing: 15
             canvas.before:
                 Color:
-                    rgba: 0.15, 0.22, 0.28, 1
+                    rgba: 0.15, 0.22, 0.28, 0.9
                 RoundedRectangle:
                     pos: self.pos
                     size: self.size
-                    radius: [15, 15, 15, 15]
+                    radius: [20]
 
             BoxLayout:
                 id: options_layout
@@ -65,79 +97,86 @@
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: '50dp'
+            height: '60dp'
             padding: 10
             spacing: 10
             BoxLayout:
                 id: lives_layout
                 orientation: 'horizontal'
-                size_hint_x: None
-                width: self.minimum_width
+                size_hint_x: 0.3
                 spacing: 5
-                canvas.before:
-                    Color:
-                        rgba: 1, 0, 0, 0.2  # Rouge transparent pour debug
-                    Rectangle:
-                        pos: self.pos
-                        size: self.size
             Label:
                 text: f"Score: {root.score}"
-                font_size: '18sp'
+                font_size: '20sp'
                 color: 1, 1, 1, 1
             ProgressBar:
+                id: progress_bar
                 value: root.progress
                 max: 100
                 size_hint_x: 0.5
+                height: '30dp'
+                canvas.before:
+                    Color:
+                        rgba: 0, 0, 0, 0.2
+                    RoundedRectangle:
+                        pos: self.x, self.y - 5
+                        size: self.size[0], self.size[1] + 10
+                        radius: [10]
+            Label:
+                id: remaining_questions_label
+                text: root.remaining_questions_text
+                font_size: '16sp'
+                color: 1, 1, 1, 1
 
-            BoxLayout:
-                orientation: 'horizontal'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: '60dp'
+            padding: 10
+            spacing: 5
+            Image:
+                source: 'chrono.png'
                 size_hint_x: None
-                width: self.minimum_width
-                spacing: 5
-                Label:
-                    text: f"Temps restant: "
-                    font_size: '18sp'
-                    color: 1, 1, 1, 1
-                    size_hint_x: None
-                    width: self.texture_size[0]
-                Image:
-                    source: 'chrono.png'
-                    size_hint_x: None
-                    width: 45
-                Label:
-                    text: f"{root.timer_text}"
-                    font_size: '18sp'
-                    color: 1, 1, 1, 1
-                    size_hint_x: None
-                    width: self.texture_size[0]
+                width: 40
+            Label:
+                text: f"Temps restant: {root.timer_text}"
+                font_size: '20sp'
+                color: 1, 1, 1, 1
 
 <GameOverScreen>:
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.2, 0.3, 1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+
     BoxLayout:
         orientation: 'vertical'
-        canvas.before:
-            Color:
-                rgba: 0.1, 0.15, 0.2, 1
-            Rectangle:
-                pos: self.pos
-                size: self.size
+        padding: 20
+        spacing: 20
         Label:
-            text: "Fin du jeu !"
-            font_size: '36sp'
+            text: "Fin du QCM !"
+            font_size: '40sp'
             color: 1, 1, 1, 1
+            bold: True
         Label:
-            text: f"Score final: {root.final_score} sur 20"
-            font_size: '28sp'
+            text: f"Score final: {root.final_score}/20"
+            font_size: '32sp'
             color: 1, 1, 1, 1
         Button:
-            text: "Rejouer"
-            font_size: '20sp'
-            background_color: 0.2, 0.6, 0.86, 1
-            size_hint: 0.5, None
-            height: '50dp'
-            on_press:
-                root.manager.current = 'question'
-                root.manager.get_screen('question').score = 0
-                root.manager.get_screen('question').lives = 3
-                root.manager.get_screen('question').current_question_index = 0
-                root.manager.get_screen('question').load_questions()
-                root.manager.get_screen('question').start_timer()
+            text: "Retour à l'accueil"
+            on_release: app.root.current = 'home'
+            font_size: '22sp'
+            background_color: 0.1, 0.7, 0.3, 1
+            color: 1, 1, 1, 1
+            size_hint: 0.6, None
+            height: '60dp'
+            pos_hint: {'center_x': 0.5}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.2
+                RoundedRectangle:
+                    pos: self.x, self.y - 5
+                    size: self.size[0], self.size[1] + 10
+                    radius: [10]
