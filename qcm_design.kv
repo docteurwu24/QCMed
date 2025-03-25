@@ -177,6 +177,24 @@
             color: 1, 1, 1, 1
             halign: 'center'
         Button:
+            text: "Voir le classement"
+            on_release: 
+                app.root.get_screen('leaderboard').qcm_id = root.theme_name
+                app.root.current = 'leaderboard'
+            font_size: '20sp'
+            background_color: 0.1, 0.5, 0.8, 1
+            color: 1, 1, 1, 1
+            size_hint: 0.6, None
+            height: '40dp'
+            pos_hint: {'center_x': 0.5}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 0.2
+                RoundedRectangle:
+                    pos: self.x, self.y - 3
+                    size: self.size[0], self.size[1] + 6
+                    radius: [8]
+        Button:
             text: "Retour à l'accueil"
             on_release: root.go_home()
             font_size: '20sp'

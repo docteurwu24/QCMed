@@ -1,0 +1,115 @@
+# --- START OF FILE leaderboard.kv ---
+#:import Factory kivy.factory.Factory
+
+<LeaderboardScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: dp(20)
+        spacing: dp(10)
+
+        Label:
+            text: f"Classement - {root.qcm_id}" if root.qcm_id else "Classement"
+            font_size: '24sp'
+            size_hint_y: None
+            height: dp(50)
+            bold: True
+            color: 0.9, 0.9, 0.9, 1
+
+        # Header Row
+        BoxLayout:
+            size_hint_y: None
+            height: dp(35) # Adjusted height slightly
+            padding: dp(5), 0
+            Label:
+                text: "Rang"
+                size_hint_x: 0.2
+                bold: True
+                halign: 'center'
+                font_style: 'Subtitle1'
+                color: 0.8, 0.8, 0.8, 1
+            Label:
+                text: "Pseudo"
+                size_hint_x: 0.5 # Reduced pseudo slightly
+                bold: True
+                halign: 'left'
+                font_style: 'Subtitle1'
+                color: 0.8, 0.8, 0.8, 1
+            Label:
+                text: "Score (/20)" # Clarified score
+                size_hint_x: 0.3 # Increased score slightly
+                bold: True
+                halign: 'right'
+                font_style: 'Subtitle1'
+                color: 0.8, 0.8, 0.8, 1
+
+        # Use RecycleView directly for scrolling
+        RecycleView:
+            id: rv # Give it an ID if needed, though not strictly necessary here
+            # --- SIMPLIFIED DATA BINDING ---
+            data: root.leaderboard_data # Directly use the list property from the screen
+            # -------------------------------
+            viewclass: 'LeaderboardItem' # Use the KV rule defined below
+            scroll_type: ['bars', 'content']
+            bar_width: dp(10)
+            do_scroll_x: False
+
+            RecycleBoxLayout:
+                default_size: None, dp(40) # Height of each LeaderboardItem
+                default_size_hint: 1, None
+                size_hint_y: None
+                height: self.minimum_height # Make layout scrollable
+                orientation: 'vertical'
+                spacing: dp(2) # Spacing between items
+
+        Button:
+            text: "Retour"
+            size_hint_y: None
+            height: dp(50)
+            font_size: '16sp'
+            # --- FIX: Go back to 'home' usually, or 'game_over' if that's intended ---
+            on_press: root.manager.current = 'home'
+            # -----------------------------------------------------------------------
+            background_color: (0.2, 0.6, 0.86, 1)
+            color: (1, 1, 1, 1)
+
+
+# --- CORRECTION HERE: Re-added explicit property definitions with correct types ---
+<LeaderboardItem@BoxLayout>:
+    rank: 0 # Use NumericProperty implicitly, default to 0
+    pseudo: "" # Use StringProperty implicitly, default to ""
+    score: 0.0 # Use NumericProperty implicitly, default to 0.0
+    size_hint_y: None
+    height: dp(40)
+    padding: dp(5), 0
+    canvas.before:
+        Color:
+            rgba: root.color if hasattr(root, 'color') else (0.2, 0.2, 0.2, 0.3) # Optional alternating background
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        # --- FIX: Convert rank to string for display ---
+        text: str(root.rank) if hasattr(root, 'rank') else '#'
+        # ---------------------------------------------
+        size_hint_x: 0.2
+        halign: 'center'
+        font_size: '14sp'
+    Label:
+        # Pseudo is likely already string, safe check added
+        text: str(root.pseudo) if hasattr(root, 'pseudo') else '...'
+        size_hint_x: 0.5
+        halign: 'left'
+        font_size: '14sp'
+        shorten: True # Add ellipsis if text is too long
+        shorten_from: 'right'
+    Label:
+        # --- FIX: Format score nicely as string ---
+        text: "{:.2f}".format(root.score) if hasattr(root, 'score') else '0.00'
+        # ------------------------------------------
+        size_hint_x: 0.3
+        halign: 'right'
+        font_size: '14sp'
+        bold: True
+
+# --- END OF FILE leaderboard.kv ---

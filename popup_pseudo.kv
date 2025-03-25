@@ -1,0 +1,26 @@
+<PseudoPopup>:
+    title: "Entrez votre pseudo"
+    size_hint: 0.8, 0.4
+    auto_dismiss: False
+    
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 20
+        
+        TextInput:
+            id: pseudo_input
+            text: root.pseudo
+            hint_text: "Votre pseudo"
+            multiline: False
+            size_hint_y: None
+            height: 50
+            font_size: '18sp'
+            
+        Button:
+            text: "Valider"
+            size_hint_y: None
+            height: 50
+            on_press: 
+                root.callback(pseudo_input.text, root.theme_name)
+                root.dismiss()
