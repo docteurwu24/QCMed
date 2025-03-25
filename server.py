@@ -5,12 +5,23 @@ from flask_sqlalchemy import SQLAlchemy
 import os # Import os to construct the database path reliably
 
 # --- Configuration ---
-BASE_DIR = os.path.abspath(os.path.dirname(__file__)) # Get the directory where the script resides
-DATABASE_PATH = os.path.join(BASE_DIR, 'leaderboard.db')
-
 app = Flask(__name__)
-# Use an absolute path for the database URI
-app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DATABASE_PATH}'
+
+# --- Database Configuration (PostgreSQL for Production, SQLite for Local Fallback) ---
+# Render provides the PostgreSQL URL in the DATABASE_URL environment variable.
+# For local development, we fall back to the SQLite database.
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
+    # Fix for newer SQLAlchemy versions requiring "postgresql://"
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+    print("Using PostgreSQL database (Production/Render).")
+else:
+    print("DATABASE_URL not found or invalid, using local SQLite database (Development).")
+    BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+    DATABASE_PATH = os.path.join(BASE_DIR, 'leaderboard.db')
+    DATABASE_URL = f'sqlite:///{DATABASE_PATH}'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -124,10 +135,12 @@ def get_leaderboard(qcm_id):
         print(f"Database error on fetching leaderboard for {qcm_id}: {e}")
         return jsonify({'error': 'Failed to retrieve leaderboard', 'details': str(e)}), 500
 
-# --- Main Execution ---
-if __name__ == '__main__':
-    print(f"Database will be located at: {DATABASE_PATH}")
-    # Consider setting host='0.0.0.0' if you need to access it from another device on your network
-    # Be cautious with debug=True in production environments
-    app.run(debug=True, host='127.0.0.1', port=5000)
+# --- Main Execution (Removed for Production) ---
+# The production server (Waitress/Gunicorn) will run the 'app' object directly.
+# The following block is only for local development testing.
+# if __name__ == '__main__':
+#     print(f"Starting local development server...")
+#     print(f"Database URI: {app.config['SQLALCHEMY_DATABASE_URI']}")
+#     # Be cautious with debug=True
+#     app.run(debug=False, host='127.0.0.1', port=5000)
 # --- END OF FILE server.py ---
