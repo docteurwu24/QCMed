@@ -1,0 +1,396 @@
+[{
+  "question": "Concernant les molécules HLA",
+  "options": [
+    "Ce sont des glycoprotéines membranaires",
+    "Elles sont caractérisées par un polymorphisme assez restreint",
+    "Elles sont codées dans un complexe génomique situé dans le chromosome 6",
+    "La région II code uniquement pour des molécules HLA de classe II",
+    "HLA-DR, HLA-DQ et HLA DP sont des molécules HLA de classe II"
+  ],
+  "correctIndices": [0, 2, 4],
+  "correctAnswers": [
+    "Vrai : Les molécules HLA sont des glycoprotéines présentes à la surface des cellules.",
+    "Faux : Les molécules HLA sont caractérisées par un polymorphisme très élevé, ce qui permet une grande diversité de reconnaissance des antigènes.",
+    "Vrai : Les gènes codant pour les molécules HLA sont situés sur le chromosome 6.",
+    "Faux : La région II code pour les molécules HLA de classe II, mais la région III code pour d'autres protéines du système immunitaire.",
+    "Vrai : HLA-DR, HLA-DQ et HLA-DP sont des molécules HLA de classe II."
+  ]
+},
+{
+  "question": "Concernant les molécules HLA",
+  "options": [
+    "Seule une chaîne alpha (ou lourde) polymorphe des molécules de classe I est codée dans le complexe HLA de classe I",
+    "Les molécules du complexe I possèdent une chaîne bêta2-microglobuline codée aussi à l’intérieur du complexe HLA",
+    "Les molécules HLA de classe II (HLA-II) ont une expression restreinte aux cellules dendritiques",
+    "Dans un contexte d’inflammation, l’expression de molécules HLA II peut être induite sur autres cellules",
+    "Les molécules HLA des deux classes partagent une organisation en 4 domaines globulaires"
+  ],
+  "correctIndices": [0, 3, 4],
+  "correctAnswers": [
+    "Vrai : Seule la chaîne alpha des molécules HLA de classe I est polymorphe et codée dans le complexe HLA.",
+    "Faux : La chaîne bêta2-microglobuline est codée en dehors du complexe HLA, sur le chromosome 15.",
+    "Faux : Les molécules HLA de classe II sont exprimées par les cellules présentatrices d'antigènes professionnelles (CPA) : cellules dendritiques, macrophages, lymphocytes B.",
+    "Vrai : L'expression des molécules HLA de classe II peut être induite sur d'autres cellules par des cytokines inflammatoires.",
+    "Vrai : Les molécules HLA de classe I et II ont une structure similaire avec des domaines globulaires."
+  ]
+},
+{
+  "question": "Concernant les molécules HLA",
+  "options": [
+    "La chaîne lourde est composée de 3 domaines globulaires pour les molécules HLA de classe II",
+    "Le site fonctionnel des molécules HLA est composé d’un sillon",
+    "Le polymorphisme des molécules HLA se concentre sur l'assemblage des chaînes alpha et bêta",
+    "Seul quelques acides aminés du peptide interagissent avec le sillon",
+    "Les lymphocytes T peuvent aussi interagir avec le peptide"
+  ],
+  "correctIndices": [1, 3, 4],
+  "correctAnswers": [
+    "Faux : La chaîne lourde des molécules HLA de classe II est composée de 2 domaines (alpha 1 et alpha 2). C'est la chaîne légère (bêta) qui a aussi 2 domaines.",
+    "Vrai : Le site fonctionnel des molécules HLA, où se lie le peptide, est un sillon formé par les domaines alpha 1 et alpha 2 (classe I) ou alpha 1 et bêta 1 (classe II).",
+    "Faux : Le polymorphisme se concentre sur les domaines alpha 1 et alpha 2 des molécules de classe I, et sur les domaines alpha 1 et bêta 1 des molécules de classe II.",
+    "Vrai : Seuls quelques acides aminés du peptide (les résidus d'ancrage) interagissent directement avec le sillon.",
+    "Vrai : Le récepteur des lymphocytes T (TCR) interagit à la fois avec le peptide et avec les parties exposées de la molécule HLA."
+  ]
+},
+{
+  "question": "Concernant les molécules HLA :",
+  "options": [
+    "Les peptides présentés par les HLA-II sont produits par le protéasome cytosolique",
+    "Le marquage des protéines pour la dégradation se fait par l’ubiquitine",
+    "le TAP est transporté par les HLA-I et est présenté aux lymphocytes T",
+    "les HLA-I sont chargées en peptides à l’aide de la tapasine",
+    "L’association des peptides et des molécules HLA-I se fait dans le cytosol"
+  ],
+  "correctIndices": [1, 3],
+  "correctAnswers": [
+    "Faux : Les peptides présentés par les HLA-II proviennent de la dégradation de protéines extracellulaires capturées par endocytose.",
+    "Vrai : L'ubiquitination marque les protéines pour la dégradation par le protéasome.",
+    "Vrai : TAP (Transporter associated with antigen processing) transporte les peptides du cytosol vers le réticulum endoplasmique, où ils sont chargés sur les HLA-I.",
+    "Vrai : La tapasine est une protéine chaperonne qui aide au chargement des peptides sur les HLA-I.",
+    "Faux : L'association des peptides et des molécules HLA-I se fait dans le réticulum endoplasmique."
+  ]
+},
+{
+  "question": "Concernant les molécules HLA :",
+  "options": [
+    "Le chargement peptidique des HLA-II se fait dans les endolysosomes",
+    "La protéolyse des peptides présentés par le HLA-I nécessite le protéasome aussi",
+    "Le chargement des protéines HLA-II se fait de manière co-traductionnelle dans le RE",
+    "La chaîne invariante empêche la liaison de peptides au HLA",
+    "La protéine HLA-DM est spécifique aux HLA-II"
+  ],
+  "correctIndices": [0, 3, 4],
+  "correctAnswers": [
+    "Vrai : Le chargement des peptides sur les HLA-II se fait dans des compartiments endosomaux tardifs appelés endolysosomes.",
+    "Vrai : La protéolyse des peptides présentés par HLA-I et HLA-II nécessite le protéasome.",
+    "Faux : Le chargement initial des HLA-II avec la chaîne invariante se fait dans le RE, mais le chargement peptidique final se fait dans les endolysosomes.",
+    "Vrai : La chaîne invariante (Ii) bloque le site de liaison des peptides sur les HLA-II dans le RE.",
+    "Vrai : HLA-DM est une molécule chaperonne spécifique des HLA-II qui facilite l'échange de CLIP (un fragment de la chaîne invariante) contre le peptide antigénique."
+  ]
+},
+{
+  "question": "Concernant les cellules dendritiques, indiquer la (ou les) proposition(s) exacte(s) :",
+  "options": [
+    "Elles n’ont pas de critère ou de marqueurs uniques",
+    "Elles se définissent par trois critères principaux",
+    "La classification des cellules dendritiques distinguent deux types de cellules uniquement : les cDC1 et les cDC2",
+    "Elles dérivent d’un progéniteur de la cellule souche hématopoïétique dans la moelle osseuse",
+    "On retrouve les pDC dans les tissus lymphoïdes et non lymphoïdes contrairement aux cDC qui sont uniquement dans les tissus lymphoïdes à l’état stationnaire"
+  ],
+  "correctIndices": [0, 1, 3],
+  "correctAnswers": [
+    "Vrai : Les cellules dendritiques sont définies par une combinaison de marqueurs et de fonctions, plutôt que par un seul marqueur unique.",
+    "Vrai : Les trois critères principaux sont : la morphologie (dendrites), la capacité à capturer et à présenter les antigènes, et l'expression de molécules de costimulation.",
+    "Faux : Il existe plusieurs types de cellules dendritiques, dont les cDC1, cDC2, et les cellules dendritiques plasmacytoïdes (pDC).",
+    "Vrai : Les cellules dendritiques dérivent de progéniteurs hématopoïétiques dans la moelle osseuse.",
+    "Faux : Les cDC peuvent se trouver dans les tissus non lymphoïdes à l'état immature. Les pDC se trouvent dans le sang et les organes lymphoïdes."
+  ]
+},
+{
+  "question": "Concernant les fonctions des cellules dendritiques, indiquer la (ou les) proposition(s) exacte(s) :",
+  "options": [
+    "La cellule dendritique immature réside dans la moelle osseuse jusqu’à l’arrivée d’un signal d’activation",
+    "La cellule dendritique immature a une faible capacité de présentation des antigènes aux lymphocytes T",
+    "Les cellules dendritiques détectent des signaux de dangers correspondant à des variations dans le microenvironnement et entraînant systématique une cascade de signalisation",
+    "L’activation de la cellule dendritique induit sa maturation ce qui déclenche sa migration vers les ganglions sans changer sa capacité à activer les lymphocytes T",
+    "Les cDC1 et cDC2 sont capables de produire des interférons de type I notamment lors d’une infection virale"
+  ],
+  "correctIndices": [1, 2],
+  "correctAnswers": [
+    "Faux : Les cellules dendritiques immatures résident dans les tissus périphériques, pas dans la moelle osseuse.",
+    "Vrai : Les cellules dendritiques immatures ont une forte capacité de capture d'antigènes, mais une faible capacité de présentation.",
+    "Vrai : Les cellules dendritiques détectent les signaux de danger (PAMPs, DAMPs) et initient une réponse immunitaire.",
+    "Faux : La maturation des cellules dendritiques augmente leur capacité à activer les lymphocytes T.",
+    "Faux: Seules les pDC sont capables de produire de grandes quantités d'IFN-I."
+  ]
+},
+{
+  "question": "Concernant le rôle immunitaire des cellules dendritiques, indiquer la (ou les) proposition(s) exacte(s) :",
+  "options": [
+    "Les cellules dendritiques ont un rôle mineur dans le maintien de la tolérance du soi",
+    "Una activation trop importante ou prolongée des cellules dendritiques n’a pas de conséquences délétères car elles font parti d’un système finement régulé",
+    "Une dérégulation des celluls dendritiques peut provoquer un lupus systémique, des maladies allergiques ou encore un diabète auto-immun",
+    "Les cellules dendritiques peuvent être utilisées dans l’immunothérapie anti-tumorale pour augmenter l’expression de molécules de co-stimulation par exemple",
+    "Parmi les approches d’immunothérapies basées sur les cellules dendritiques, on peut citer les inhibiteurs de point de contrôle immunologique"
+  ],
+  "correctIndices": [2, 4],
+  "correctAnswers": [
+    "Faux: Les cellules dendritiques jouent un rôle crucial dans la tolérance centrale et périphérique.",
+    "Faux: Une activation excessive des cellules dendritiques peut conduire à des maladies auto-immunes ou inflammatoires.",
+    "Vrai: La dérégulation des cellules dendritiques est impliquée dans diverses maladies auto-immunes.",
+    "Vrai: Les cellules dendritiques sont utilisées en immunothérapie pour stimuler la réponse immunitaire anti-tumorale.",
+    "Vrai: Les inhibiteurs de points de contrôle immunologiques sont une approche d'immunothérapie, mais ils ne sont pas directement basés sur les cellules dendritiques. Ils ciblent les lymphocytes T."
+  ]
+},{
+      "question": "Concernant le récepteur T pour l’antigène, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Le TCR des lymphocytes T CD8 reconnait des peptides présentés par les molécules du CMH de classe I",
+        "Les lymphocytes T acquièrent leur récepteur TCR lors de leur différenciation dans la moelle osseuse",
+        "Le TCR a une structure de type immunoglobuline et peut être de deux types",
+        "Pour permettre la transduction du signal, le TCR s’associe à un complexe CD3 comportant des motifs ITAM",
+        "L’interaction CMH/TCR est stable par nature"
+      ],
+      "correctIndices": [0, 2, 3],
+      "correctAnswers": [
+        "Vrai : Les TCR des lymphocytes T CD8 reconnaissent les peptides présentés par les molécules HLA de classe I.",
+        "Faux : Les lymphocytes T acquièrent leur TCR lors de leur différenciation dans le thymus.",
+        "Vrai : Le TCR a une structure similaire à celle des immunoglobulines et peut être de type αβ ou γδ.",
+        "Vrai : Le complexe CD3, associé au TCR, contient des motifs ITAM qui permettent la transduction du signal.",
+        "Faux : L'interaction CMH/TCR est de faible affinité, mais elle est stabilisée par des molécules de co-récepteurs (CD4 ou CD8)."
+      ]
+    },
+    {
+      "question": "Concernant le développement des lymphocytes T αβ, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Les protéines Notch permettent de diriger le développement des progéniteurs lymphoïdes vers la lignée T",
+        "Comme pour les immunoglobulines, il existe des segments VDJ réarrangés en présence de séquences signal de recombinaison",
+        "La sélection positive des lymphocytes T a lieu au stade DP",
+        "La sélection négative entraîne une délétion des thymocytes exprimant un TCR ayant une trop faible affinité pour les antigènes du soi",
+        "Après la sélection thymique, il reste 98% des lymphocytes T"
+      ],
+      "correctIndices": [0, 1, 2],
+      "correctAnswers": [
+        "Vrai : La signalisation Notch est essentielle pour l'engagement des progéniteurs lymphoïdes vers la voie T.",
+        "Vrai : La recombinaison V(D)J, similaire à celle des immunoglobulines, génère la diversité des TCR.",
+        "Vrai : La sélection positive, qui sélectionne les lymphocytes T capables de reconnaître les molécules HLA du soi, a lieu au stade double positif (DP).",
+        "Faux : La sélection négative élimine les thymocytes ayant une *trop forte* affinité pour les antigènes du soi, afin d'éviter l'auto-immunité.",
+        "Faux : Après la sélection thymique, il ne reste qu'environ 1 à 2% des lymphocytes T."
+      ]
+    },
+    {
+      "question": "Concernant les 3 signaux d’activation des LT CD4+ naïfs, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Le premier signal est un signal cytokinique au cours duquel on observe une interaction forte du TCR avec un complexe CMH-peptide.",
+        "Le deuxième signal est un signal de costimulation entre le récepteur CD80 du LT et son ligand CD28 sur la CPA.",
+        "Les cytokines impliquées dans le troisième signal sont d’origine paracrine exclusivement, sécrétées par des cellules immunes avoisinantes, des cellules stromales ou des cellules épithéliales.",
+        "L’absence de second signal conduit à un lymphocyte anergique.",
+        "L’IL-2 induit des signaux de survie et de prolifération grâce à sa fixation sur son récepteur IL2RA."
+      ],
+      "correctIndices": [3, 4],
+      "correctAnswers": [
+        "Faux : Le premier signal est l'interaction du TCR avec le complexe CMH-peptide, pas un signal cytokinique.",
+        "Faux : C'est l'inverse. Le récepteur CD28 est sur le LT et son ligand CD80/86 (B7) est sur la CPA.",
+        "Faux : Les cytokines du troisième signal peuvent aussi être d'origine autocrine (sécrétées par le LT lui-même).",
+        "Vrai : L'absence de signal de costimulation conduit à l'anergie (inactivation) du lymphocyte T.",
+        "Vrai : L'IL-2 est un facteur de croissance important pour les lymphocytes T."
+      ]
+    },
+    {
+      "question": "Concernant la polarisation des LT activés, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "L’orientation des LT dans une voie de différenciation associée à des spécificités fonctionnelles est permise par les cytokines captées par les LT lors du troisième signal d'activation.",
+        "Les infections parasitaires extracellulaires stimulent une réponse Th2.",
+        "L’IL-12 sécrétée par les CPA induit une différenciation Th1 qui va aboutir à la sécrétion d’IFN-.",
+        "Les infections bactériennes intracellulaires stimulent la réponse Th17.",
+        "La différenciation Th2 est portée par le facteur de transcription Gata-3."
+      ],
+      "correctIndices": [0, 1, 2, 4],
+      "correctAnswers": [
+        "Vrai : Les cytokines du troisième signal déterminent la polarisation des lymphocytes T CD4+.",
+        "Vrai : Les infections parasitaires extracellulaires stimulent une réponse Th2, qui produit des anticorps IgE et active les éosinophiles.",
+        "Vrai : L'IL-12 induit la différenciation Th1, qui produit de l'IFN-γ et active les macrophages.",
+        "Faux : Les infections bactériennes *extracellulaires* et les infections fongiques stimulent la réponse Th17.",
+        "Vrai : GATA-3 est le facteur de transcription maître de la différenciation Th2."
+      ]
+    },
+    {
+      "question": "Concernant la régulation de l’activation des LT, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Le LT activé exprime deux molécules inhibitrices qui diminuent toutes deux le signal de costimulation.",
+        "La molécule OX40 est indispensable à l’activation des LT naïfs.",
+        "D’autres couples récepteurs ligands des familles B7 et TNFR peuvent délivrer des signaux activateurs ou inhibiteurs.",
+        "La molécule CTL4 permet de diminuer la signalisation en aval de CD28.",
+        "Un déficit ou un excès des mécanismes de régulation peut conduire à des réactions allergiques à IgE."
+      ],
+      "correctIndices": [0, 2],
+      "correctAnswers": [
+          "Vrai : CTLA-4 et PD-1 sont deux molécules inhibitrices exprimées par les LT activés.",
+          "Faux : OX40 est une molécule de costimulation qui *favorise* l'activation des LT, pas qui est indispensable.",
+          "Vrai : Il existe de nombreux couples récepteur/ligand qui régulent l'activation des LT.",
+          "Vrai : CTLA-4 entre en compétition avec CD28 pour la liaison à CD80/86, diminuant ainsi la costimulation.",
+          "Faux : Un déficit des mécanismes de régulation peut conduire à des maladies auto-immunes, pas à des réactions allergiques à IgE (qui sont plutôt liées à une réponse Th2 excessive)."
+        ]
+    },
+    {
+      "question": "Concernant les lymphocytes T régulateurs, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Les lymphocytes T régulateurs représentent la grande majorité des lymphocytes T CD4+.",
+        "Les LT régulateurs naturels sont générés dans le thymus et contrôlent les LT autoréactifs ayant échappé à la sélection négative.",
+        "Les lymphocytes T régulateurs expriment le facteur de transcription FOXP3 spécifique des LTreg.",
+        "Les lymphocytes régulateurs périphériques protègent contre le développement de maladies auto-immunes.",
+        "Les lymphocytes T régulateurs ont une sensibilité accrue à l’IL2 grâce à l’expression constitutive du récepteur CD25."
+      ],
+      "correctIndices": [1, 4],
+      "correctAnswers": [
+        "Faux : Les lymphocytes T régulateurs représentent une petite fraction (environ 5-10%) des lymphocytes T CD4+.",
+        "Vrai : Les Treg naturels sont générés dans le thymus et préviennent l'auto-immunité.",
+        "Vrai : FOXP3 est le facteur de transcription maître des Treg.",
+        "Faux: C'est le rôle des Treg *naturels*. Les Treg périphériques (ou induits) sont générés en périphérie et jouent un rôle dans la tolérance aux antigènes non-soi (aliments, microbiote, etc.).",
+        "Vrai : CD25 (la chaîne alpha du récepteur de l'IL-2) est exprimé de manière constitutive par les Treg, ce qui leur confère une sensibilité accrue à l'IL-2."
+      ]
+    },
+    {
+      "question": "Concernant les fonctions des lymphocytes T régulateurs, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Les lymphocytes T régulateurs peuvent inhiber les cellules présentatrices d’antigène en exprimant la molécule PD1 qui interagit avec CD80/86 entraînant la production de l’enzyme IDO par les cellules dendritiques qui aboutit à l’apoptose des lymphocytes T effecteurs.",
+        "Les lymphocytes T régulateurs peuvent inhiber les LT CD4+ et les LT CD8+ naïfs ou effecteurs, les cellules NK, les cellules dendritiques et les lymphocytes B.",
+        "En situation tumorale, on observe souvent une diminution des lymphocytes T régulateurs inhibant ainsi le développement d’une réponse immunitaire efficace contre les cellules tumorales.",
+        "Les lymphocytes T régulateurs produisent des cytokines suppressives comme l'IL 10, le TGF et l'IL 35 qui inhibent la différenciation, la prolifération et l’activation des cellules effectrices.",
+        "Les lymphocytes T régulateurs causent l’apoptose des lymphocytes T effecteurs en les privant d’IL 2."
+      ],
+      "correctIndices": [1, 3],
+      "correctAnswers": [
+        "Faux : C'est CTLA-4, pas PD-1, qui interagit avec CD80/86 sur les CPA. L'interaction CTLA-4/CD80-86 peut induire la production d'IDO par les CPA, mais cela n'entraîne pas directement l'apoptose des LT effecteurs. IDO supprime la réponse T en privant les cellules de tryptophane.",
+        "Vrai : Les Treg peuvent inhiber une grande variété de cellules immunitaires.",
+        "Faux : En situation tumorale, on observe souvent une *augmentation* des Treg, ce qui inhibe la réponse immunitaire anti-tumorale.",
+        "Vrai : L'IL-10, le TGF-β et l'IL-35 sont des cytokines immunosuppressives produites par les Treg.",
+        "Vrai : Les Treg peuvent consommer l'IL-2, privant ainsi les LT effecteurs de ce facteur de croissance et induisant leur apoptose."
+      ]
+    },
+    {
+      "question": "Concernant les différenciation des lymphocytes T CD8+ effecteurs, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Les lymphocytes T CD8 sortant du thymus possèdent une activité cytotoxique spontanée.",
+        "La mise en place de l’activation et de la multiplication des lymphocytes T CD8 nécessite un environnement immunitaire de type Th2.",
+        "Après activation, les lymphocytes T CD8 se multiplient rapidement et intensément en se divisant plus de vingt fois.",
+        "La plupart des lymphocytes T CD8+ effecteurs ont une longue demi vie.",
+        "Dans l’infection par le virus EBV, on observe une intense prolifération des LT CD8 aboutissant dans 80% des cas au syndrome mononucléosique."
+      ],
+      "correctIndices": [2, 4],
+      "correctAnswers": [
+        "Faux : Les lymphocytes T CD8 sortant du thymus sont naïfs et n'ont pas d'activité cytotoxique spontanée.",
+        "Faux : L'activation des LT CD8 nécessite un environnement de type Th1 (IFN-γ, IL-12).",
+        "Vrai : Les LT CD8 activés subissent une expansion clonale massive.",
+        "Faux : La plupart des LT CD8 effecteurs ont une courte durée de vie. Seule une petite fraction devient des cellules mémoire.",
+        "Vrai : L'infection par EBV (mononucléose infectieuse) est caractérisée par une forte prolifération des LT CD8."
+      ]
+    },
+    {
+      "question": "Concernant la cytotoxicité des lymphocytes T CD8+, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Le LT CD8 crée une synapse avec la cellule cible conduisant à une redistribution des molécules de costimulation au centre de la synapse et des molécules d’adhésion en périphérie.",
+        "Les mécanismes de cytotoxicité des LT CD8 participent également au contrôle de l’homéostasie T CD8 en induisant la nécrose des LT entre eux.",
+        "Les lymphocytes T CD8 entraînent une lyse cellulaire rapide lui permettant de tuer jusqu’à 100 cellules cibles par jour.",
+        "Le LT CD8 libère le contenu de ses granules cytotoxiques contenant des granzymes qui vont créer des pores dans la membrane plasmique de la cellule cible permettant ainsi la pénétration des perforines.",
+        "Les déficits immunitaires secondaires à des altérations de la formation des synapses, de la libération des granules cytotoxiques ou de l’interaction Fas/FasL peuvent conduire à un syndrome d’activation immunitaire."
+      ],
+      "correctIndices": [0, 4],
+      "correctAnswers": [
+        "Vrai: Il y a bien formation d'une synapse immunologique, mais les molécules d'adhésion (LFA-1) sont au centre et les TCR (et molécules de costimulation) en périphérie.",
+        "Faux: Les LT CD8 induisent l'apoptose (mort cellulaire programmée), pas la nécrose.",
+        "Faux: Un LT CD8 peut tuer plusieurs cellules cibles, mais pas 100 par jour.",
+        "Faux: C'est l'inverse. La perforine crée des pores, et les granzymes pénètrent ensuite pour induire l'apoptose.",
+        "Vrai: Des défauts dans ces mécanismes peuvent conduire à un syndrome lymphohistiocytaire familial (HLH)."
+      ]
+    },
+    {
+      "question": "Concernant l’expansion et la différenciation des lymphocytes T, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Au pic d’expansion clonale des LT CD8, on observe un phénomène de régulation qui entraîne la contraction des LT CD8.",
+        "La réponse cellulaire T cytotoxique nécessite une à deux semaines à être mise en place.",
+        "Une petite quantité de LT CD4 persiste dans l’organisme et rejoint le stock de lymphocytes T mémoires.",
+        "Les lymphocytes T mémoires centraux sont résidents de manière prolongée dans les tissus et ont un rôle majeur dans la réponse de première ligne au niveau des muqueuses en particulier.",
+        "Le stress métabolique, la compétition pour les cytokines, la disparition des antigènes cibles et l’expression de récepteurs inducteurs d’apoptose contribuent à la régulation de l’apoptose."
+      ],
+      "correctIndices": [0, 1, 2],
+      "correctAnswers": [
+        "Vrai : Après le pic d'expansion, la majorité des LT CD8 effecteurs meurent par apoptose (contraction).",
+        "Vrai : La réponse T cytotoxique prend environ 1 à 2 semaines pour atteindre son maximum.",
+        "Vrai : Une petite fraction des LT CD8 (et CD4) devient des cellules mémoire à longue durée de vie.",
+        "Faux : Les lymphocytes T mémoires centraux (Tcm) circulent dans le sang et les organes lymphoïdes secondaires. Ce sont les lymphocytes T mémoires effecteurs résidents (Trm) qui résident dans les tissus.",
+        "Vrai : Tous ces facteurs contribuent à la contraction de la réponse T."
+      ]
+    },
+    {
+      "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Les immunoglobulines sont composées uniquement de chaînes lourdes.",
+        "Les chaînes lourdes et légères sont reliées par des ponts disulfures.",
+        "Les immunoglobulines sont produites par les macrophages.",
+        "Il existe 5 isotypes d’immunoglobulines chez l’homme.",
+        "Les IgM sont toujours monomériques en circulation sanguine."
+      ],
+      "correctIndices": [1, 3],
+      "correctAnswers": [
+        "Faux : Les immunoglobulines sont composées de deux chaînes lourdes et de deux chaînes légères.",
+        "Vrai : Les chaînes lourdes et légères sont reliées par des ponts disulfures.",
+        "Faux : Les immunoglobulines sont produites par les plasmocytes (lymphocytes B différenciés).",
+        "Vrai : Il existe 5 isotypes d'immunoglobulines : IgG, IgM, IgA, IgD et IgE.",
+        "Faux : Les IgM sont pentamériques (5 unités) en circulation sanguine."
+      ]
+    },
+    {
+      "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Le fragment Fab est responsable des fonctions effectrices des immunoglobulines.",
+        "Le fragment Fc permet de reconnaître de façon spécifique l’Ag",
+        "Les IgE jouent un rôle dans les réactions allergiques.",
+        "La diversité des immunoglobulines est due uniquement aux mutations somatiques.",
+        "La recombinaison V(D)J concerne uniquement les chaînes lourdes."
+      ],
+      "correctIndices": [2],
+      "correctAnswers": [
+        "Faux : Le fragment Fab est responsable de la liaison à l'antigène. Le fragment Fc est responsable des fonctions effectrices.",
+        "Faux : C'est le fragment Fab qui reconnaît l'antigène.",
+        "Vrai : Les IgE sont impliquées dans les réactions allergiques et la défense contre les parasites.",
+        "Faux : La diversité des immunoglobulines est due à la recombinaison V(D)J, à l'hypermutation somatique et à l'addition/délétion de nucléotides aux jonctions.",
+        "Faux : La recombinaison V(D)J concerne à la fois les chaînes lourdes et les chaînes légères."
+      ]
+    },
+    {
+      "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Les boucles CDR sont impliquées dans la reconnaissance de l’antigène.",
+        "La région constante définit la spécificité antigénique de l’immunoglobuline.",
+        "La région constante des IgA est adaptée à leur passage à travers les muqueuses.",
+        "Le récepteur FcRn permet la transcytose des IgA à travers les muqueuses.",
+        "Les IgE favorisent l’activation des cellules NK dans l’ADCC."
+      ],
+      "correctIndices": [0, 2],
+      "correctAnswers": [
+        "Vrai : Les boucles CDR (Complementarity-Determining Regions) sont les régions hypervariables qui interagissent avec l'antigène.",
+        "Faux : La région variable définit la spécificité antigénique. La région constante définit l'isotype et les fonctions effectrices.",
+        "Vrai : La région constante des IgA dimériques leur permet de se lier au récepteur poly-Ig et d'être transportées à travers les muqueuses.",
+        "Faux: C'est le récepteur poly-Ig qui permet la transcytose des IgA, pas FcRn. FcRn permet la transcytose des IgG.",
+        "Faux: Ce sont les IgG qui favorisent l'ADCC (Antibody-Dependent Cell-mediated Cytotoxicity) via leur interaction avec les récepteurs FcγRIII (CD16) des cellules NK."
+      ]
+    },
+    {
+      "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
+      "options": [
+        "Les IgG sont les plus abondantes dans le sérum humain.",
+        "Les IgA sont toujours monomériques.",
+        "Les IgG ont une demi-vie courte.",
+        "Une réduction du taux d’anticorps circulants, voire leur absence provoque un déficit immunitaire",
+        "L’administration d’IgG intraveineuses (IVIg) peut être utilisée pour traiter des déficits immunitaires."
+      ],
+      "correctIndices": [0, 3, 4],
+      "correctAnswers": [
+        "Vrai : Les IgG représentent environ 80% des immunoglobulines sériques.",
+        "Faux : Les IgA peuvent être monomériques (dans le sérum) ou dimériques (dans les sécrétions muqueuses).",
+        "Faux : Les IgG ont une demi-vie relativement longue (environ 21 jours).",
+        "Vrai : L'hypogammaglobulinémie ou l'agammaglobulinémie sont des déficits immunitaires.",
+        "Vrai : Les IVIg sont utilisées pour traiter les déficits immunitaires humoraux et certaines maladies auto-immunes."
+      ]
+    }
+]

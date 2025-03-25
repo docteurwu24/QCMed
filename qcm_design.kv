@@ -1,182 +1,194 @@
 #:import FadeTransition kivy.uix.screenmanager.FadeTransition
 
-
 <OptionButton@Button>:
-    text_size: self.width, None
+    text_size: self.width - 30, None
     halign: 'center'
-    shorten: True
-    shorten_from: 'right'
+    valign: 'middle'
+    padding: [8, 8]
     background_normal: ''
-    background_color: 0.2, 0.6, 0.86, 1
-    color: 1, 1, 1, 1
-    font_size: '18sp'
+    background_color: 0.05, 0.15, 0.3, 1  # Bleu très foncé
+    color: 0.9, 0.9, 0.95, 1  # Blanc légèrement bleuté
+    font_size: '16sp'
     size_hint_y: None
-    height: '60dp'
+    size_hint_x: 0.9
+    height: max(self.texture_size[1] + 10, 40)
+    pos_hint: {'center_x': 0.5}
     canvas.before:
         Color:
-            rgba: 0, 0, 0, 0.2 if self.state == 'normal' else 0, 0, 0, 0.4
-        RoundedRectangle:
-            pos: self.x, self.y - 5
-            size: self.size[0], self.size[1] + 10
-            radius: [15]
+            rgba: 0.2, 0.4, 0.8, 0.3 if self.state == 'normal' else 0.3, 0.6, 1, 0.6  # Surbrillance au survol
+        Line:
+            width: 1.5
+            rounded_rectangle: self.x, self.y, self.width, self.height, 10
         Color:
             rgba: self.background_color
         RoundedRectangle:
             pos: self.pos
             size: self.size
-            radius: [15, 15, 15, 15]
-    background_normal: ''
-    background_color: 0.2, 0.6, 0.86, 1
-    color: 1, 1, 1, 1
-    font_size: '18sp'
+            radius: [10]
+
+<CorrectionLabel@Label>:
+    text_size: self.width - 30, None
+    halign: 'center'
+    valign: 'top'
+    color: 0.9, 0.9, 0.9, 1
+    font_size: '14sp'
     size_hint_y: None
-    height: '60dp'
+    size_hint_x: 0.9
+    height: max(self.texture_size[1] + 5, 30)
+    pos_hint: {'center_x': 0.5}
     canvas.before:
         Color:
-            rgba: 0, 0, 0, 0.2
-        RoundedRectangle:
-            pos: self.x, self.y - 5
-            size: self.size[0], self.size[1] + 10
-            radius: [15]
-        Color:
-            rgba: self.background_color
-        RoundedRectangle:
-            pos: self.pos
-            size: self.size
-            radius: [15, 15, 15, 15]
+            rgba: 0, 0, 0, 0
+
+<OptionLayout@BoxLayout>:
+    orientation: 'vertical'
+    size_hint_y: None
+    size_hint_x: 1
+    height: self.minimum_height
+    spacing: 3
+    padding: [5, 3]
 
 <QuestionScreen>:
     canvas.before:
         Color:
-            rgba: 0.1, 0.2, 0.3, 1
+            rgba: 0.05, 0.1, 0.2, 1  # Fond plus sombre
         RoundedRectangle:
             pos: self.pos
             size: self.size
   
     BoxLayout:
         orientation: 'vertical'
-        padding: 20
-        spacing: 15
+        padding: 10
+        spacing: 2  # Réduit l'espacement entre la question et les options
+        size_hint: 0.95, 0.95
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 
         Label:
             text: root.question_text
-            font_size: '26sp'
+            font_size: '18sp'
             color: 1, 1, 1, 1
             halign: 'center'
             valign: 'middle'
             text_size: self.width - 40, None
             size_hint_y: None
-            height: self.texture_size[1] + 30
+            height: self.texture_size[1] + 3  # Réduit la hauteur pour compacter
             bold: True
 
         BoxLayout:
             orientation: 'vertical'
+            padding: 2  # Padding réduit
+            spacing: 2  # Espacement réduit
             size_hint_y: None
-            height: self.minimum_height + 30
-            padding: 20
-            spacing: 15
+            height: self.minimum_height + 20  # Taille adaptative mais limitée
             canvas.before:
                 Color:
                     rgba: 0.15, 0.22, 0.28, 0.9
                 RoundedRectangle:
                     pos: self.pos
                     size: self.size
-                    radius: [20]
-
+                    radius: [15]
             BoxLayout:
                 id: options_layout
                 orientation: 'vertical'
                 size_hint_y: None
                 height: self.minimum_height
-                spacing: 10
-
-        Widget:
-            size_hint_y: None
-            height: 20
+                spacing: 3
 
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: '60dp'
-            padding: 10
-            spacing: 10
+            height: '40dp'
+            padding: 5
+            spacing: 5
             BoxLayout:
                 id: lives_layout
                 orientation: 'horizontal'
                 size_hint_x: 0.3
-                spacing: 5
+                spacing: 3
             Label:
                 text: f"Score: {root.score}"
-                font_size: '20sp'
+                font_size: '16sp'
                 color: 1, 1, 1, 1
+                halign: 'center'
             ProgressBar:
                 id: progress_bar
                 value: root.progress
                 max: 100
                 size_hint_x: 0.5
-                height: '30dp'
+                height: '20dp'
                 canvas.before:
                     Color:
-                        rgba: 0, 0, 0, 0.2
+                        rgba: 0, 0, 0, 0.3
                     RoundedRectangle:
-                        pos: self.x, self.y - 5
-                        size: self.size[0], self.size[1] + 10
-                        radius: [10]
+                        pos: self.x, self.y - 3
+                        size: self.size[0], self.size[1] + 6
+                        radius: [8]
+                    Color:
+                        rgba: 0.3, 0.6, 1, 0.6
+                    Rectangle:
+                        pos: self.x, self.y - 3
+                        size: self.width * (self.value / float(self.max)), self.height + 6
             Label:
                 id: remaining_questions_label
                 text: root.remaining_questions_text
-                font_size: '16sp'
+                font_size: '14sp'
                 color: 1, 1, 1, 1
+                halign: 'center'
 
         BoxLayout:
             orientation: 'horizontal'
             size_hint_y: None
-            height: '60dp'
-            padding: 10
-            spacing: 5
+            height: '40dp'
+            padding: 5
+            spacing: 3
             Image:
                 source: 'chrono.png'
                 size_hint_x: None
-                width: 40
+                width: 30
             Label:
                 text: f"Temps restant: {root.timer_text}"
-                font_size: '20sp'
+                font_size: '16sp'
                 color: 1, 1, 1, 1
+                halign: 'center'
 
 <GameOverScreen>:
     canvas.before:
         Color:
-            rgba: 0.1, 0.2, 0.3, 1
+            rgba: 0.07, 0.14, 0.21, 1  # Fond légèrement plus sombre
         RoundedRectangle:
             pos: self.pos
             size: self.size
 
     BoxLayout:
         orientation: 'vertical'
-        padding: 20
-        spacing: 20
+        padding: 10
+        spacing: 10
+        size_hint: 0.8, 0.6
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
         Label:
             text: "Fin du QCM !"
-            font_size: '40sp'
+            font_size: '36sp'
             color: 1, 1, 1, 1
+            halign: 'center'
             bold: True
         Label:
             text: f"Score final: {root.final_score}/20"
-            font_size: '32sp'
+            font_size: '28sp'
             color: 1, 1, 1, 1
+            halign: 'center'
         Button:
             text: "Retour à l'accueil"
-            on_release: app.root.current = 'home'
-            font_size: '22sp'
+            on_release: root.go_home()
+            font_size: '20sp'
             background_color: 0.1, 0.7, 0.3, 1
             color: 1, 1, 1, 1
             size_hint: 0.6, None
-            height: '60dp'
+            height: '40dp'
             pos_hint: {'center_x': 0.5}
             canvas.before:
                 Color:
                     rgba: 0, 0, 0, 0.2
                 RoundedRectangle:
-                    pos: self.x, self.y - 5
-                    size: self.size[0], self.size[1] + 10
-                    radius: [10]
+                    pos: self.x, self.y - 3
+                    size: self.size[0], self.size[1] + 6
+                    radius: [8]

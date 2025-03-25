@@ -3,7 +3,7 @@
 <HomeScreen>:
     canvas.before:
         Color:
-            rgba: 0.1, 0.2, 0.3, 1  # Couleur unie (bleu foncé)
+            rgba: 0.07, 0.14, 0.21, 1  # Harmonisation avec GameOverScreen
         Rectangle:
             pos: self.pos
             size: self.size
@@ -31,11 +31,11 @@
             size_hint: 0.7, None
             height: '70dp'
             pos_hint: {'center_x': 0.5}
-            background_color: 0.2, 0.6, 0.86, 1
-            color: 1, 1, 1, 1
+            background_color: 0.05, 0.15, 0.3, 1  # Harmonisation avec OptionButton
+            color: 0.9, 0.9, 0.95, 1
             canvas.before:
                 Color:
-                    rgba: 0, 0, 0, 0.3
+                    rgba: 0.2, 0.4, 0.8, 0.3
                 RoundedRectangle:
                     pos: self.x - 5, self.y - 5
                     size: self.width + 10, self.height + 10
@@ -49,11 +49,16 @@
             size_hint: 0.7, None
             height: '70dp'
             pos_hint: {'center_x': 0.5}
-            background_color: 0.1, 0.7, 0.3, 1
-            color: 1, 1, 1, 1
+            background_color: 0.1, 0.5, 0.2, 1  # Vert plus foncé
+            color: 0.9, 0.9, 0.95, 1
             canvas.before:
                 Color:
-                    rgba: 0, 0, 0, 0.3
+                    rgba: 0.2, 0.8, 0.4, 0.3 if self.state == 'normal' else 0.3, 1, 0.5, 0.6  # Effet survol
+                Line:
+                    width: 1.5
+                    rounded_rectangle: self.x-5, self.y-5, self.width+10, self.height+10, 15
+                Color:
+                    rgba: self.background_color
                 RoundedRectangle:
                     pos: self.x - 5, self.y - 5
                     size: self.width + 10, self.height + 10

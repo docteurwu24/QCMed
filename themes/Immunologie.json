@@ -9,7 +9,14 @@
       "L’oeil contient de nombreux vaisseaux lymphatiques",
       "La rate est un organe important pour le système immunitaire"
     ],
-    "correctIndices": [0, 2, 4]
+    "correctIndices": [0, 2, 4],
+    "correctAnswers": [
+      "Vrai : Le thymus est un organe lymphoïde primaire où les lymphocytes T maturent.",
+      "Faux : Le cartilage est un tissu conjonctif avasculaire, il ne contient donc pas de vaisseaux lymphatiques.",
+      "Vrai : Le coeur contient des tissus lymphatiques, notamment des lymphocytes, qui jouent un rôle dans la réponse immunitaire.",
+      "Faux : L'oeil est un site de privilège immunitaire, il est donc relativement dépourvu de vaisseaux lymphatiques.",
+      "Vrai : La rate est un organe lymphoïde secondaire important pour la filtration du sang et la réponse immunitaire."
+    ]
   },
   {
     "question": "Concernant les organes lymphoïdes, indiquer la (ou les) proposition(s) exacte(s) :",
@@ -20,8 +27,124 @@
       "Les cellules NK de l’immunité innée maturent dans le thymus.",
       "90% des plasmocytes producteurs d’IgG et d’IgA sont en dehors de la moelle osseuse."
     ],
-    "correctIndices": [0]
+    "correctIndices": [0],
+    "correctAnswers": [
+      "Vrai : Il existe des conflits antigéniques en permanence dans l’organisme, déclenchés par des agents pathogènes ou des substances étrangères.",
+      "Faux : La moelle osseuse est colonisée plus tôt, vers le 2ème mois de la vie foetale.",
+      "Faux : Chez l'adulte, l'hématopoïèse se concentre principalement dans les os plats (sternum, côtes, vertèbres, os iliaques).",
+      "Faux : Les cellules NK maturent principalement dans la moelle osseuse, pas dans le thymus.",
+      "Faux : La majorité (environ 90%) des plasmocytes producteurs d'IgG et d'IgA se trouvent dans la moelle osseuse."
+    ]
   },
+  {
+    "question": "Concernant les organes lymphoïdes primaires, quelles affirmations sont exactes ?",
+    "options": [
+      "La moelle osseuse est le site de maturation des lymphocytes T.",
+      "Le thymus est un organe lympho-épithélial bilobé situé dans le médiastin antérieur supérieur.",
+      "Les lymphocytes B acquièrent leur récepteur spécifique à l'antigène (BCR) dans le thymus.",
+      "L'activité thymique augmente avec l'âge jusqu'à la puberté, puis diminue.",
+      "Les lymphocytes naïfs quittent les organes lymphoïdes primaires pour rencontrer l'antigène dans la circulation sanguine."
+    ],
+    "correctIndices": [1, 3, 4],
+    "correctAnswers": [
+      "Faux : La moelle osseuse est le site de maturation des lymphocytes B, pas T.",
+      "Vrai : Le thymus est bien situé dans le médiastin antérieur supérieur et est essentiel à la maturation des lymphocytes T.",
+      "Faux : Les lymphocytes B acquièrent leur BCR dans la moelle osseuse.",
+      "Vrai : Le thymus atteint sa taille maximale à la puberté et subit une involution par la suite.",
+      "Vrai : Après maturation, les lymphocytes naïfs circulent pour rencontrer les antigènes."
+    ]
+  },
+  {
+    "question": "Concernant le réseau lymphatique, quelles affirmations sont exactes ?",
+    "options": [
+      "Le flux lymphatique est pulsé par le cœur.",
+      "Les vaisseaux efférents des ganglions convergent vers le canal thoracique.",
+      "La lymphe transporte des hormones et des lipides issus de l'intestin.",
+      "Les lymphocytes entrent et sortent des ganglions via les veinules à haut endothélium (HEV).",
+      "Le réseau lymphatique est un système de circulation à haute pression."
+    ],
+    "correctIndices": [1, 2, 3],
+    "correctAnswers": [
+      "Faux : Le flux lymphatique est lent et non pulsé.",
+      "Vrai : Les vaisseaux efférents convergent vers le canal thoracique.",
+      "Vrai : La lymphe transporte des hormones et des lipides.",
+      "Vrai : Les HEV permettent l'entrée et la sortie des lymphocytes des ganglions.",
+      "Faux : Le réseau lymphatique est un système à basse pression."
+    ]
+  },
+  {
+    "question": "Concernant les organes lymphoïdes secondaires, quelles affirmations sont exactes ?",
+    "options": [
+      "La rate est l'organe lymphoïde secondaire le plus volumineux et filtre la lymphe.",
+      "Les ganglions lymphatiques concentrent les antigènes présents dans le sang.",
+      "La pulpe rouge de la rate est riche en lymphocytes et assure l'immunosurveillance.",
+      "Les lymphocytes pénètrent dans les ganglions via les veinules à haut endothélium (HEV).",
+      "Le MALT est spécialisé dans la capture des antigènes présents dans les muqueuses."
+    ],
+    "correctIndices": [3, 4],
+    "correctAnswers": [
+      "Faux : La rate filtre le sang, pas la lymphe.",
+      "Faux : Les ganglions filtrent la lymphe, pas le sang.",
+      "Faux : La pulpe rouge est riche en macrophages, pas en lymphocytes.",
+      "Vrai : Les HEV permettent l'entrée des lymphocytes dans les ganglions.",
+      "Vrai : Le MALT est associé aux muqueuses et capture les antigènes présents dans ces zones."
+    ]
+  },
+  {
+    "question": "Concernant la maturation des lymphocytes T dans le thymus, quelles affirmations sont exactes ?",
+    "options": [
+      "La sélection positive des lymphocytes T se déroule dans la médullaire thymique.",
+      "Les lymphocytes T expriment leur récepteur TCR avant de migrer vers le cortex thymique.",
+      "La sélection négative élimine les lymphocytes T reconnaissant trop fortement les auto-antigènes.",
+      "Environ 10% des lymphocytes T produits dans le thymus survivent à la sélection.",
+      "Les cellules épithéliales thymiques jouent un rôle crucial dans la présentation des antigènes aux lymphocytes T en maturation."
+    ],
+    "correctIndices": [2, 4],
+    "correctAnswers": [
+      "Faux : La sélection positive se déroule principalement dans le cortex thymique.",
+      "Faux : Les lymphocytes T expriment leur TCR pendant leur migration du cortex vers la médullaire.",
+      "Vrai : La sélection négative élimine les lymphocytes T auto-réactifs.",
+      "Faux : Seulement environ 2% des lymphocytes T survivent à la sélection.",
+      "Vrai : Les cellules épithéliales thymiques sont essentielles pour la présentation antigénique."
+    ]
+  },
+  {
+    "question": "Concernant la structure et la fonction des ganglions lymphatiques, quelles affirmations sont exactes ?",
+    "options": [
+      "Les lymphocytes B sont principalement localisés dans la zone paracorticale des ganglions.",
+      "Les veinules à haut endothélium (HEV) permettent l'entrée des lymphocytes dans les vaisseaux lymphatiques efférents.",
+      "Les chimiokines CCL19 et CCL21 attirent les lymphocytes T vers les follicules lymphoïdes.",
+      "Les ganglions lymphatiques filtrent le sang et éliminent les globules rouges vieillissants.",
+      "Les centres germinatifs des follicules lymphoïdes sont le siège de la prolifération des lymphocytes B."
+    ],
+    "correctIndices": [4],
+    "correctAnswers": [
+      "Faux : Les lymphocytes T sont localisés dans la zone paracorticale, et les lymphocytes B dans les follicules.",
+      "Faux : Les HEV permettent l'entrée à partir des vaisseaux sanguins, pas la sortie dans les efférents lymphatique.",
+      "Faux : Ces chimiokines attirent les lymphocytes T vers la zone paracorticale.",
+      "Faux : La filtration du sang est une fonction de la rate, pas des ganglions.",
+      "Vrai : Les centres germinatifs sont essentiels pour la prolifération des lymphocytes B."
+    ]
+  },
+  {
+    "question": "Concernant le rôle et la structure de la rate, quelles affirmations sont exactes ?",
+    "options": [
+      "La pulpe rouge de la rate est riche en lymphocytes T et B.",
+      "La rate est un organe lymphoïde primaire chez l'adulte.",
+      "La zone marginale de la rate est impliquée dans les réponses humorales T-dépendantes.",
+      "La rate filtre le sang et élimine les agents pathogènes et les cellules sanguines endommagées.",
+      "La pulpe blanche de la rate est organisée autour des veinules à haut endothélium (HEV)."
+    ],
+    "correctIndices": [3],
+    "correctAnswers": [
+      "Faux : La pulpe rouge est riche en macrophages, pas en lymphocytes.",
+      "Faux : La rate est un organe lymphoïde secondaire.",
+      "Faux : La zone marginale est impliquée dans les réponses T-indépendantes.",
+      "Vrai : La rate filtre le sang et élimine les cellules endommagées et les pathogènes.",
+      "Faux : La pulpe blanche est organisée autour des artérioles centrales."
+    ]
+  },
+
     {
     "question": "Concernant les organes lymphoïdes, indiquer la (ou les) proposition(s) exacte(s) :",
     "options": [
@@ -31,7 +154,14 @@
       "Les réseaux lymphatiques et sanguins sont connectés entre eux par le canal thoracique.",
       "La lymphe est constituée par le liquide interstitiel se trouvant au niveau des tissus."
     ],
-    "correctIndices": [0, 3, 4]
+    "correctIndices": [0, 3, 4],
+    "correctAnswers": [
+      "Vrai : L'activité thymique, essentielle pour la maturation des lymphocytes T, commence dès le deuxième mois de la vie foetale.",
+      "Faux : Seulement environ 1 à 2% des lymphocytes T survivent à la sélection thymique.",
+      "Faux : Un stress important diminue l'activité du thymus, ce qui peut affaiblir la réponse immunitaire.",
+      "Vrai : Le canal thoracique relie les réseaux lymphatiques et sanguins, permettant aux lymphocytes et à la lymphe de circuler.",
+      "Vrai : La lymphe est formée à partir du liquide interstitiel qui draine les tissus."
+    ]
   },
     {
     "question": "Concernant les organes lymphoïdes, indiquer la (ou les) proposition(s) exacte(s) :",
@@ -42,7 +172,14 @@
       "Les ganglions jouent un rôle de filtre en empêchant la rencontre entre Ag et lymphocytes.",
       "Les lymphocytes B et T se distribuent aux mêmes régions du ganglion."
     ],
-    "correctIndices": [1, 2]
+    "correctIndices": [1, 2],
+    "correctAnswers": [
+      "Faux : La voie lymphatique n'est pas pulsée par le cœur, mais par la contraction des muscles et les mouvements du corps.",
+      "Vrai : La lymphe du canal thoracique se déverse dans la veine cave supérieure, rejoignant ainsi la circulation sanguine.",
+      "Vrai : Il y a environ 500 à 700 ganglions lymphatiques dans le corps humain.",
+      "Faux : Les ganglions facilitent la rencontre entre les antigènes et les lymphocytes, ce qui est crucial pour la réponse immunitaire.",
+      "Faux : Les lymphocytes B et T se trouvent dans des zones distinctes du ganglion (cortex et paracortex, respectivement)."
+    ]
   },
   {
         "question": "Concernant les organes lymphoïdes, indiquer la (ou les) proposition(s) exacte(s) :",
@@ -53,9 +190,16 @@
       "Le MALT représente 80% de la masse de tissu lymphoïde de l’organisme.",
       "Le MALT d’un nouveau né est riche."
     ],
-    "correctIndices": [1, 3]
+    "correctIndices": [1, 3],
+    "correctAnswers": [
+      "Faux : Le foie n'est pas un organe lymphoïde secondaire. La rate est l'organe lymphoïde secondaire le plus volumineux.",
+      "Vrai : La rate est spécialisée dans la filtration du sang, éliminant les globules rouges âgés et les pathogènes.",
+      "Faux : La pulpe blanche de la rate est riche en lymphocytes, tandis que la pulpe rouge est riche en macrophages.",
+      "Vrai : Le MALT (tissu lymphoïde associé aux muqueuses) représente une grande partie du tissu lymphoïde.",
+      "Faux : Le MALT d'un nouveau-né est peu développé, il se développe avec l'exposition aux antigènes."
+    ]
   },
-    {
+  {
     "question": "Concernant la réponse innée et la réponse adaptative, quelles sont la ou les bonnes réponses ?",
     "options": [
       "La réponse innée est très fine car reconnaît des petites séquences peptidiques issues de l’apprêtement antigénique.",
@@ -64,7 +208,14 @@
       "La discrimination soi/non-soi est très efficace dans la réponse adaptative, si efficace qu’aucune erreur est possible.",
       "Les effecteurs cellulaires de la réponse innée contiennent, parmis tant d’autres, les phagocytes, les cellules dendritiques, les mastocytes et les NK."
     ],
-    "correctIndices": [2, 4]
+    "correctIndices": [2, 4],
+    "correctAnswers": [
+      "Faux : La réponse innée est moins spécifique que la réponse adaptative. Elle reconnaît des motifs moléculaires associés aux pathogènes (PAMPs).",
+      "Faux : Les récepteurs PRR de la réponse innée ne subissent pas de recombinaison génétique. Leur diversité est limitée.",
+      "Vrai : Les anticorps et les cytokines sont les principaux effecteurs solubles de la réponse adaptative.",
+      "Faux : La discrimination soi/non-soi de la réponse adaptative n'est pas parfaite, ce qui peut conduire à des maladies auto-immunes.",
+      "Vrai : Les phagocytes, cellules dendritiques, mastocytes et cellules NK sont des effecteurs cellulaires de la réponse innée."
+    ]
   }, 
       {
     "question": "Concernant les récepteurs pathogènes, quelles sont la ou les bonnes réponses ?",
@@ -75,7 +226,86 @@
       "L’activation des TLR activent des facteurs de transcription qui activent la voie NFκB et la voie IRF",
       "La voie NF-κB induit la production d’interférons (IFN) de type 1 et la voie IRF induit la production de cytokines pro-inflammatoires comme TNF-α et IL-6"
     ],
-    "correctIndices": [0, 1, 3]
+    "correctIndices": [0, 1, 3],
+    "correctAnswers": [
+      "Vrai : Les TLR surveillent à la fois la surface cellulaire et les endosomes.",
+      "Vrai : TLR 3, 7, 8 et 9 reconnaissent les acides nucléiques viraux et bactériens dans les endosomes.",
+      "Vrai : Les TLR ont un domaine transmembranaire et un domaine cytosolique (TIR).",
+      "Vrai : L'activation des TLR active les facteurs de transcription NF-κB et IRF.",
+      "Faux : C'est l'inverse. NF-κB induit la production de cytokines pro-inflammatoires, et IRF induit la production d'interférons de type I."
+    ]
+  },
+  {
+    "question": "Quelles affirmations sont exactes concernant les organes lymphoïdes, le réseau lymphatique et le système immunitaire muqueux (MALT) ?",
+    "options": [
+      "La moelle osseuse est le site de maturation des lymphocytes T, et le thymus celui des lymphocytes B.",
+      "Les veinules à haut endothélium (HEV) permettent aux lymphocytes d'entrer et de sortir des ganglions lymphatiques.",
+      "Le MALT représente environ 80% de la masse de tissu lymphoïde de l'organisme et est spécialisé dans la tolérance aux antigènes alimentaires.",
+      "La rate filtre la lymphe et élimine les globules rouges vieillissants.",
+      "Les cellules M du MALT capturent les antigènes environnementaux, et les plasmocytes du MALT sécrètent principalement des IgM."
+    ],
+    "correctIndices": [1, 2],
+    "correctAnswers": [
+      "Faux : C'est l'inverse : la moelle osseuse pour les lymphocytes B et le thymus pour les lymphocytes T.",
+      "Vrai : Les HEV sont essentiels pour le passage des lymphocytes dans les ganglions.",
+      "Vrai : Le MALT est prédominant et joue un rôle crucial dans la tolérance alimentaire.",
+      "Faux : La rate filtre le sang, pas la lymphe.",
+      "Faux : Les cellules M capturent les antigènes, mais les plasmocytes du MALT sécrètent principalement des IgA."
+    ]
+  },
+    {
+    "question": "Concernant les récepteurs de reconnaissance de motifs (PRR), quelles affirmations sont exactes ?",
+    "options": [
+      "Les PRR reconnaissent uniquement les PAMPs (pathogen-associated molecular patterns).",
+      "Les TLR sont des PRR localisés exclusivement dans le cytosol.",
+      "L'activation des TLR induit toujours la production d'interféron de type 1.",
+      "Les RLR et NLR sont des PRR cytosoliques impliqués dans la détection de pathogènes intracellulaires.",
+      "STING est un PRR membranaire du réticulum endoplasmique (RE) qui détecte l'ADN viral."
+    ],
+    "correctIndices": [3, 4],
+    "correctAnswers": [
+      "Faux : Les PRR reconnaissent à la fois les PAMPs et les DAMPs (danger-associated molecular patterns).",
+      "Faux : Les TLR sont localisés à la surface cellulaire et dans les endosomes, pas exclusivement dans le cytosol.",
+      "Faux : L'activation des TLR induit la production d'interféron de type 1 via la voie IRF, mais aussi la sécrétion de cytokines inflammatoires via la voie NF-kB.",
+      "Vrai : Les RLR et NLR sont des PRR cytosoliques qui détectent les pathogènes intracellulaires.",
+      "Vrai : STING est un PRR du RE qui détecte l'ADN viral via la production de dinucléotides cycliques par la cGAS."
+    ]
+  },
+  {
+    "question": "Concernant les récepteurs Toll-like (TLR), quelles affirmations sont exactes ?",
+    "options": [
+      "TLR4 reconnaît les peptidoglycanes des bactéries à Gram positif.",
+      "TLR3, TLR7/8 et TLR9 sont localisés dans les endosomes et reconnaissent des acides nucléiques.",
+      "Tous les TLR forment des homodimères à la surface cellulaire.",
+      "L'activation des TLR conduit à la production exclusive de TNF-α et IL-6.",
+      "Le domaine TIR des TLR est extracellulaire et interagit directement avec les ligands."
+    ],
+    "correctIndices": [1],
+    "correctAnswers": [
+      "Faux : TLR4 reconnaît le LPS des bactéries à Gram négatif.",
+      "Vrai : Ces TLR endosomaux reconnaissent des acides nucléiques viraux et bactériens.",
+      "Faux : TLR1, TLR2 et TLR6 forment des hétérodimères.",
+      "Faux : L'activation des TLR conduit aussi à la production d'interférons de type 1.",
+      "Faux : Le domaine TIR est cytosolique et interagit avec des adaptateurs."
+    ]
+  },
+    {
+    "question": "Concernant les récepteurs cytosoliques et l'inflammasome, quelles affirmations sont exactes ?",
+    "options": [
+      "Les récepteurs NOD reconnaissent l'ARN viral et induisent la production d'interféron.",
+      "Les récepteurs NLRP sont activés uniquement par des produits microbiens.",
+      "L'inflammasome est une structure qui active la caspase 1 et la production d'IL-1 et IL-18.",
+      "STING détecte les produits de dégradation des peptidoglycanes bactériens.",
+      "Les RLR induisent la formation de l'inflammasome."
+    ],
+    "correctIndices": [2],
+    "correctAnswers": [
+      "Faux : Les récepteurs NOD reconnaissent les peptidoglycanes bactériens et activent NF-kB.",
+      "Faux : Les récepteurs NLRP sont activés par des produits microbiens et des molécules du soi.",
+      "Vrai : L'inflammasome active la caspase 1 et les cytokines IL-1 et IL-18.",
+      "Faux : STING détecte les dinucléotides cycliques.",
+      "Faux : Les RLR induisent la production d'interféron de type 1."
+    ]
   },
   {
         "question": "Concernant la détection de pathogènes dans le cytosol, quelles sont la ou les bonnes réponses ?",
@@ -86,8 +316,33 @@
       "STING est un récepteur endosomique qui détecte les protéines bactériennes et active la réponse inflammatoire via NF-κB",
       "Les récepteurs RLR et NLR sont principalement exprimés à la surface des cellules immunitaires pour détecter les pathogènes extracellulaires"
     ],
-    "correctIndices": [0, 2]
+    "correctIndices": [0, 2],
+    "correctAnswers": [
+      "Vrai : Les RLR reconnaissent l'ARN viral dans le cytoplasme et induisent la sécrétion d'IFN de type I.",
+      "Faux : Les NLRP reconnaissent une variété de signaux de danger, pas seulement les infections virales.",
+      "Vrai : L'activation de NLRP peut conduire à la formation de l'inflammasome et à la production d'IL-1β et d'IL-18.",
+      "Faux : STING est un récepteur cytosolique qui détecte l'ADN bactérien et viral.",
+      "Faux : Les récepteurs RLR et NLR sont principalement exprimés à l'intérieur des cellules."
+    ]
   },
+    {
+      "question": "Quelles affirmations sont exactes concernant les récepteurs de l'immunité innée ?",
+      "options": [
+        "Les récepteurs de reconnaissance de motifs (PRR) reconnaissent uniquement les PAMPs (pathogen-associated molecular patterns) et sont localisés exclusivement dans le cytosol.",
+        "Les récepteurs Toll-like (TLR) sont des PRR transmembranaires ou endosomaux qui reconnaissent divers ligands microbiens et induisent la production de cytokines inflammatoires et d'interférons.",
+        "Les récepteurs Fc (FcR) reconnaissent le fragment Fab des immunoglobulines et sont impliqués dans la cytotoxicité cellulaire dépendante des anticorps (ADCC).",
+        "Les récepteurs de mannoses et de β-glucan reconnaissent respectivement des sucres et des composants fongiques et sont impliqués dans la phagocytose.",
+        "Les récepteurs NOD et NLRP sont des PRR cytosoliques qui reconnaissent des composants bactériens et des molécules du soi, et induisent la formation de l'inflammasome et la production d'IL-1 et IL-18."
+      ],
+      "correctIndices": [1, 3, 4],
+      "correctAnswers": [
+        "Faux : Les PRR reconnaissent également les DAMPs et sont localisés à la surface cellulaire, dans les endosomes et le cytosol.",
+        "Vrai : Les TLR sont des PRR importants qui reconnaissent divers ligands et induisent des réponses immunitaires.",
+        "Faux : Les FcR reconnaissent le fragment Fc, pas le fragment Fab.",
+        "Vrai : Les récepteurs de mannoses et de β-glucan reconnaissent des motifs glucidiques et fongiques.",
+        "Vrai : Les récepteurs NOD et NLRP sont bien des PRR cytosoliques qui induisent la formation de l'inflammasome et la production de cytokines pro-inflammatoires."
+      ]
+    },
     {
       "question": "Concernant l’activation et les fonctions du compléments, quelles sont la ou les bonnes réponses ?",
       "options": [
@@ -97,7 +352,14 @@
         "L’activation des récepteurs du complément (CR1, CR3, etc) sur les macrophages favorise la phagocytose des pathogènes recouverts de C3b",
         "Le complexe d’attaque membranaire (CAM) est composé des fragments C3b et C4b qui forment des pores dans les membranes bactériennes"
       ],
-      "correctIndices": [0, 2, 3]
+      "correctIndices": [0, 2, 3],
+      "correctAnswers": [
+        "Vrai : La protéine C1q se lie aux anticorps IgM ou IgG fixés à un pathogène, activant la voie classique.",
+        "Faux : La voie alterne peut être amplifiée par la voie classique et la voie des lectines.",
+        "Vrai : Les C3 convertases clivent C3 en C3a (anaphylatoxine) et C3b (opsonine).",
+        "Vrai : La liaison de C3b aux récepteurs du complément sur les macrophages favorise la phagocytose.",
+        "Faux : Le complexe d'attaque membranaire (CAM) est formé par C5b, C6, C7, C8 et C9."
+      ]
     },
     {
       "question": "Concernant la régulation et les conséquences du complément, quelles sont la ou les bonnes réponses ?",
@@ -108,251 +370,320 @@
         "La voie des lectines est exclusivement déclenchée par la liaison de MBL aux immunoglobulines recouvrant un pathogène",
         "Le CAM (C5b-C9) est principalement efficace contre les bactéries à Gram positif, car elles possèdent une membrane externe fragile"
       ],
-      "correctIndices": [0, 1]
+      "correctIndices": [0, 1],
+      "correctAnswers": [
+        "Vrai : CD55 et CD59 empêchent l'activation incontrôlée du complément sur les cellules hôtes.",
+        "Vrai : C5a et C3a sont des anaphylatoxines qui recrutent les cellules immunitaires et peuvent provoquer un choc anaphylactique.",
+        "Faux : La properdine est une protéine stabilisatrice du complément qui favorise la formation des C3 convertases.",
+        "Faux : La voie des lectines est déclenchée par la liaison de MBL (mannose-binding lectin) aux sucres présents sur les pathogènes.",
+        "Faux : Le CAM est plus efficace contre les bactéries à Gram négatif, qui ont une membrane externe."
+      ]
+    },
+  {
+    "question": "Concernant la voie classique du complément, quelles affirmations sont exactes ?",
+    "options": [
+      "C1q se lie directement aux composants de la paroi bactérienne pour initier la voie.",
+      "C1r et C1s sont des protéases qui clivent C3 et C5.",
+      "La C3 convertase de la voie classique est le complexe C4b2a.",
+      "La voie classique est activée principalement par les anticorps IgM liés à un antigène.",
+      "La voie classique ne contribue pas à l'opsonisation."
+    ],
+    "correctIndices": [2, 3],
+    "correctAnswers": [
+      "Faux : C1q se lie aux immunoglobulines, pas directement à la paroi bactérienne.",
+      "Faux : C1r et C1s clivent C4 et C2, pas C3 et C5.",
+      "Vrai : La C3 convertase de la voie classique est le complexe C4b2a.",
+      "Vrai : La voie classique est activée principalement par les anticorps IgM liés à un antigène.",
+      "Faux : La voie classique contribue à l'opsonisation via C3b."
+    ]
+  },
+  {
+    "question": "Concernant la voie lectine du complément, quelles affirmations sont exactes ?",
+    "options": [
+      "La voie lectine est activée par la liaison de la properdine aux glucides des pathogènes.",
+      "Les MASP sont des enzymes qui clivent C3 pour former la C3 convertase.",
+      "La C3 convertase de la voie lectine est identique à celle de la voie classique.",
+      "La voie lectine est spécifique aux bactéries à Gram négatif.",
+      "La voie lectine ne contribue pas à la formation du complexe d'attaque membranaire (CAM)."
+    ],
+    "correctIndices": [2],
+    "correctAnswers": [
+      "Faux : La voie lectine est activée par la liaison de MBL et des ficollines, pas de la properdine.",
+      "Faux : Les MASP clivent C4 et C2, pas C3.",
+      "Vrai : La C3 convertase de la voie lectine est identique à celle de la voie classique (C4b2a).",
+      "Faux : La voie lectine n'est pas spécifique aux bactéries à Gram négatif.",
+      "Faux : La voie lectine contribue à la formation du CAM."
+    ]
+  },
+  {
+    "question": "Concernant la voie alterne du complément, quelles affirmations sont exactes ?",
+    "options": [
+      "La voie alterne est initiée par la liaison de C1q aux anticorps.",
+      "Le Facteur D clive le Facteur B en présence de C3b.",
+      "La properdine inhibe la formation de la C3 convertase alterne.",
+      "La voie alterne ne peut pas être activée en l'absence d'anticorps.",
+      "La voie alterne est la principale voie d'activation du complément dans les infections virales."
+    ],
+    "correctIndices": [1],
+    "correctAnswers": [
+      "Faux : La voie alterne est initiée par l'hydrolyse spontanée de C3.",
+      "Vrai : Le Facteur D clive le Facteur B en présence de C3b.",
+      "Faux : La properdine stabilise la C3 convertase alterne.",
+      "Faux : La voie alterne peut être activée en l'absence d'anticorps.",
+      "Faux : La voie alterne est importante dans les infections bactériennes, pas principalement virales."
+    ]
+  },
+  {
+    "question": "Concernant la régulation du système du complément, quelles affirmations sont exactes ?",
+    "options": [
+      "Le Facteur I inactive C3b en le clivant.",
+      "Le CD59 inhibe la formation de la C3 convertase.",
+      "Les anaphylatoxines sont inactivées par la properdine.",
+      "La régulation du complément est essentielle pour prévenir les dommages aux tissus de l'hôte.",
+      "Le C1-inhibiteur inhibe la formation du CAM."
+    ],
+    "correctIndices": [0, 3],
+    "correctAnswers": [
+      "Vrai : Le Facteur I inactive C3b en le clivant.",
+      "Faux : Le CD59 inhibe la formation du CAM.",
+      "Faux : Les anaphylatoxines sont inactivées par les carboxypeptidases.",
+      "Vrai : La régulation du complément est essentielle pour prévenir les dommages aux tissus de l'hôte.",
+      "Faux : Le C1-inhibiteur inhibe la voie classique, pas le CAM."
+    ]
+  },
+    {
+      "question": "Concernant la détection des pathogènes et l'activation cellulaire, quelles affirmations sont exactes ?",
+      "options": [
+        "Les macrophages sont les seules cellules capables de reconnaître les PAMPs.",
+        "Les mastocytes sont principalement localisés dans le système nerveux central.",
+        "Le complément et les macrophages libèrent des médiateurs de l'inflammation en réponse à la détection de pathogènes.",
+        "Les cellules épithéliales ne participent pas à la production de médiateurs de l'inflammation.",
+        "Les macrophages alvéolaires sont spécifiques du foie."
+      ],
+      "correctIndices": [2],
+      "correctAnswers": [
+        "Faux : D'autres cellules comme les mastocytes reconnaissent aussi les PAMPs.",
+        "Faux : Les mastocytes sont présents près des vaisseaux sanguins, surtout aux frontières avec l'extérieur.",
+        "Vrai : Le complément et les macrophages libèrent des médiateurs de l'inflammation.",
+        "Faux : Les cellules épithéliales participent à la production de médiateurs de l'inflammation.",
+        "Faux : Les macrophages alvéolaires sont spécifiques des poumons."
+      ]
     },
     {
-      "question": "Concernant les molécules HLA",
+      "question": "Concernant les cytokines, quelles affirmations sont exactes ?",
       "options": [
-        "Ce sont des glycoprotéines membranaires",
-        "Elles sont caractérisées par un polymorphisme assez restreint",
-        "Elles sont codées dans un complexe génomique situé dans le chromosome 6",
-        "La région II code uniquement pour des molécules HLA de classe II",
-        "HLA-DR, HLA-DQ et HLA DP sont des molécules HLA de classe II"
+        "Les cytokines sont des lipides de haute masse moléculaire.",
+        "Les cytokines agissent exclusivement par action endocrine.",
+        "Les chimiokines stimulent la migration dirigée des cellules immunitaires.",
+        "L'IL-1β, le TNF-α et l'IL-6 sont des cytokines anti-inflammatoires.",
+        "Les interférons de type II sont des chimiokines."
       ],
-      "correctIndices": [0, 2, 4]
+      "correctIndices": [2],
+      "correctAnswers": [
+        "Faux : Les cytokines sont des protéines de faible masse moléculaire.",
+        "Faux : Les cytokines agissent par actions autocrine, paracrine et endocrine.",
+        "Vrai : Les chimiokines stimulent la migration des cellules immunitaires.",
+        "Faux : L'IL-1β, le TNF-α et l'IL-6 sont des cytokines pro-inflammatoires.",
+        "Faux : Les interférons de type II sont des hématopoïétines."
+      ]
     },
     {
-      "question": "Concernant les molécules HLA",
+      "question": "Concernant les macrophages et les mastocytes, quelles affirmations sont exactes ?",
       "options": [
-        "Seule une chaîne alpha (ou lourde) polymorphe des molécules de classe I est codée dans le complexe HLA de classe I",
-        "Les molécules du complexe I possèdent une chaîne bêta2-microglobuline codée aussi à l’intérieur du complexe HLA",
-        "Les molécules HLA de classe II (HLA-II) ont une expression restreinte aux cellules dendritiques",
-        "Dans un contexte d’inflammation, l’expression de molécules HLA II peut être induite sur autres cellules",
-        "Les molécules HLA des deux classes partagent une organisation en 4 domaines globulaires"
+        "Les macrophages sont des cellules résidentes spécialisées dans la production d'anticorps.",
+        "Les mastocytes libèrent des cytokines après phagocytose de pathogènes.",
+        "Les macrophages de Küpffer sont localisés dans les os.",
+        "Les mastocytes libèrent leurs granules en réponse à l'activation.",
+        "Les macrophages et les mastocytes ne participent pas à l'inflammation."
       ],
-      "correctIndices": [0, 3, 4]
+      "correctIndices": [3],
+      "correctAnswers": [
+        "Faux : Les macrophages sont des cellules phagocytaires, pas productrices d'anticorps.",
+        "Faux : Les mastocytes libèrent des granules, pas des cytokines, lors de l'activation initiale.",
+        "Faux : Les macrophages de Küpffer sont localisés dans le foie.",
+        "Vrai : Les mastocytes libèrent leurs granules en réponse à l'activation.",
+        "Faux : Les macrophages et les mastocytes sont des acteurs clés de l'inflammation."
+      ]
     },
-    {
-      "question": "Concernant les molécules HLA",
-      "options": [
-        "La chaîne lourde est composée de 3 domaines globulaires pour les molécules HLA de classe II",
-        "Le site fonctionnel des molécules HLA est composé d’un sillon",
-        "Le polymorphisme des molécules HLA se concentre sur l'assemblage des chaînes alpha et bêta",
-        "Seul quelques acides aminés du peptide interagissent avec le sillon",
-        "Les lymphocytes T peuvent aussi interagir avec le peptide"
-      ],
-      "correctIndices": [1, 3, 4]
-    },
-    {
-      "question": "Concernant les molécules HLA :",
-      "options": [
-        "Les peptides présentés par les HLA-II sont produits par le protéasome cytosolique",
-        "Le marquage des protéines pour la dégradation se fait par l’ubiquitine",
-        "le TAP est transporté par les HLA-I et est présenté aux lymphocytes T",
-        "les HLA-I sont chargées en peptides à l’aide de la tapasine",
-        "L’association des peptides et des molécules HLA-I se fait dans le cytosol"
-      ],
-      "correctIndices": [1, 3]
-    },
-    {
-      "question": "Concernant les molécules HLA :",
-      "options": [
-        "Le chargement peptidique des HLA-II se fait dans les endolysosomes",
-        "La protéolyse des peptides présentés par le HLA-I nécessite le protéasome aussi",
-        "Le chargement des protéines HLA-II se fait de manière co-traductionnelle dans le RE",
-        "La chaîne invariante empêche la liaison de peptides au HLA",
-        "La protéine HLA-DM est spécifique aux HLA-II"
-      ],
-      "correctIndices": [0, 3, 4]
-    },
-    {
-      "question": "Concernant les cellules dendritiques, indiquer la (ou les) proposition(s) exacte(s) :",
-      "options": [
-        "Elles n’ont pas de critère ou de marqueurs uniques",
-        "Elles se définissent par trois critères principaux",
-        "La classification des cellules dendritiques distinguent deux types de cellules uniquement : les cDC1 et les cDC2",
-        "Elles dérivent d’un progéniteur de la cellule souche hématopoïétique dans la moelle osseuse",
-        "On retrouve les pDC dans les tissus lymphoïdes et non lymphoïdes contrairement aux cDC qui sont uniquement dans les tissus lymphoïdes à l’état stationnaire"
-      ],
-      "correctIndices": [0, 1, 3]
-    },
-    {
-      "question": "Concernant les fonctions des cellules dendritiques, indiquer la (ou les) proposition(s) exacte(s) :",
-      "options": [
-        "La cellule dendritique immature réside dans la moelle osseuse jusqu’à l’arrivée d’un signal d’activation",
-        "La cellule dendritique immature a une faible capacité de présentation des antigènes aux lymphocytes T",
-        "Les cellules dendritiques détectent des signaux de dangers correspondant à des variations dans le microenvironnement et entraînant systématique une cascade de signalisation",
-        "L’activation de la cellule dendritique induit sa maturation ce qui déclenche sa migration vers les ganglions sans changer sa capacité à activer les lymphocytes T",
-        "Les cDC1 et cDC2 sont capables de produire des interférons de type I notamment lors d’une infection virale"
-      ],
-      "correctIndices": [1, 2]
-    },
-    {
-      "question": "Concernant le rôle immunitaire des cellules dendritiques, indiquer la (ou les) proposition(s) exacte(s) :",
-      "options": [
-        "Les cellules dendritiques ont un rôle mineur dans le maintien de la tolérance du soi",
-        "Una activation trop importante ou prolongée des cellules dendritiques n’a pas de conséquences délétères car elles font parti d’un système finement régulé",
-        "Une dérégulation des celluls dendritiques peut provoquer un lupus systémique, des maladies allergiques ou encore un diabète auto-immun",
-        "Les cellules dendritiques peuvent être utilisées dans l’immunothérapie anti-tumorale pour augmenter l’expression de molécules de co-stimulation par exemple",
-        "Parmi les approches d’immunothérapies basées sur les cellules dendritiques, on peut citer les inhibiteurs de point de contrôle immunologique"
-      ],
-      "correctIndices": [2, 4]
-    },
-    
+      {
+        "question": "Concernant la phagocytose et les cellules impliquées, quelles affirmations sont exactes ?",
+        "options": [
+          "Les cellules dendritiques sont les principales cellules phagocytaires résidentes.",
+          "Les polynucléaires neutrophiles sont recrutés en premier sur le site d'infection.",
+          "Les monocytes se différencient en neutrophiles après migration dans les tissus.",
+          "La phagocytose est déclenchée uniquement par la reconnaissance de glycosylations typiques des microbes.",
+          "Les NETs sont composés de chromatine et de protéines granuleuses libérées lors de la phagocytose."
+        ],
+        "correctIndices": [1, 4],
+        "correctAnswers": [
+          "Faux : Les macrophages résidents sont les principales cellules phagocytaires résidentes.",
+          "Vrai : Les polynucléaires neutrophiles sont les premiers recrutés.",
+          "Faux : Les monocytes se différencient en macrophages inflammatoires.",
+          "Faux : La phagocytose est déclenchée par divers récepteurs, y compris les FcR.",
+          "Vrai : Les NETs sont composés de chromatine et de protéines granuleuses."
+        ]
+      },
+      {
+        "question": "Concernant les mécanismes de la phagocytose, quelles affirmations sont exactes ?",
+        "options": [
+          "L'opsonisation facilite la phagocytose en activant les récepteurs lectine.",
+          "Le phagosome fusionne directement avec le noyau pour dégrader les pathogènes.",
+          "La NADPH oxydase phagocytaire produit des formes réactives de l'azote.",
+          "La lactoferrine a une action bactéricide en acidifiant le phagolysosome.",
+          "Les hydrolases lysosomales contribuent à la dégradation des pathogènes dans le phagolysosome."
+        ],
+        "correctIndices": [4],
+        "correctAnswers": [
+          "Faux : L'opsonisation active les FcR, pas les récepteurs lectine.",
+          "Faux : Le phagosome fusionne avec un lysosome, pas le noyau.",
+          "Faux : La NADPH oxydase produit des formes réactives de l'oxygène, pas de l'azote.",
+          "Faux : La lactoferrine a une action bactériostatique, pas bactéricide, en séquestrant le fer.",
+          "Vrai : Les hydrolases lysosomales dégradent les pathogènes."
+        ]
+      },
+      {
+        "question": "Concernant la réponse interféron de type 1, quelles affirmations sont exactes ?",
+        "options": [
+          "L'IFN-γ est le principal interféron de type 1.",
+          "L'IFN de type 1 inhibe la réplication virale en stimulant la production d'une DNAse antivirale.",
+          "Les cellules dendritiques plasmacytoïdes sont les principales productrices d'IFN de type 1.",
+          "L'IFN de type 1 n'a pas d'effet sur les cellules dendritiques et les macrophages.",
+          "L'IFN de type 1 agit uniquement par action autocrine."
+        ],
+        "correctIndices": [2],
+        "correctAnswers": [
+          "Faux : L'IFN-α et l'IFN-β sont les principaux interférons de type 1.",
+          "Faux : L'IFN de type 1 stimule la production d'une RNAse antivirale, pas d'une DNAse.",
+          "Vrai : Les cellules dendritiques plasmacytoïdes sont les principales productrices d'IFN de type 1.",
+          "Faux : L'IFN de type 1 active les cellules dendritiques et les macrophages.",
+          "Faux : L'IFN de type 1 agit par actions autocrine et paracrine."
+        ]
+      },
         {
-          "question": "Concernant le récepteur T pour l’antigène, indiquer la (ou les) proposition(s) exacte(s) :",
+          "question": "Concernant les cellules lymphoïdes innées (ILCs), quelles affirmations sont exactes ?",
           "options": [
-            "Le TCR des lymphocytes T CD8 reconnait des peptides présentés par les molécules du CMH de classe I",
-            "Les lymphocytes T acquièrent leur récepteur TCR lors de leur différenciation dans la moelle osseuse",
-            "Le TCR a une structure de type immunoglobuline et peut être de deux types",
-            "Pour permettre la transduction du signal, le TCR s’associe à un complexe CD3 comportant des motifs ITAM",
-            "L’interaction CMH/TCR est stable par nature"
+            "Les ILCs expriment des récepteurs à l'antigène et subissent une sélection clonale.",
+            "Les ILCs sont classées en fonction de leur profil de cytokines, similaire aux lymphocytes T CD8+.",
+            "Les ILCs réagissent rapidement aux signaux des tissus lésés ou infectés.",
+            "Les ILCs sont principalement présentes en grand nombre dans le sang circulant.",
+            "Les ILCs activent la réponse immunitaire adaptative en présentant des antigènes via le CMH de classe I."
           ],
-          "correctIndices": [0, 2, 3]
+          "correctIndices": [3],
+          "correctAnswers": [
+            "Faux : Les ILCs n'expriment pas de récepteurs à l'antigène et ne subissent pas de sélection clonale.",
+            "Faux : Les ILCs sont classées en fonction de leur profil de cytokines, similaire aux lymphocytes T CD4+.",
+            "Vrai : Les ILCs réagissent rapidement aux signaux des tissus lésés ou infectés.",
+            "Faux : Les ILCs sont principalement résidentes dans les tissus et rares dans le sang.",
+            "Faux : Les ILCs activent la réponse immunitaire en sécrétant des cytokines et en régulant les cellules dendritiques, et expriment des molécules de CMH de classe II."
+          ]
         },
         {
-          "question": "Concernant le développement des lymphocytes T αβ, indiquer la (ou les) proposition(s) exacte(s) :",
+          "question": "Concernant les sous-groupes d'ILCs et les cellules NK, quelles affirmations sont exactes ?",
           "options": [
-            "Les protéines Notch permettent de diriger le développement des progéniteurs lymphoïdes vers la lignée T",
-            "Comme pour les immunoglobulines, il existe des segments VDJ réarrangés en présence de séquences signal de recombinaison",
-            "La sélection positive des lymphocytes T a lieu au stade DP",
-            "La sélection négative entraîne une délétion des thymocytes exprimant un TCR ayant une trop faible affinité pour les antigènes du soi",
-            "Après la sélection thymique, il reste 98% des lymphocytes T"
+            "Les ILC1 sécrètent principalement de l'IL-4, de l'IL-5 et de l'IL-13.",
+            "Les ILC3 jouent un rôle majeur dans la défense contre les parasites.",
+            "Les cellules NK ont des capacités de cytotoxicité similaires aux lymphocytes T CD8+.",
+            "Les ILC2 sécrètent des cytokines de type Th17.",
+            "Les cellules NK sont classées dans le même groupe que les ILCs en raison de leurs profils cytokiniques similaires."
           ],
-          "correctIndices": [0, 1, 2]
+          "correctIndices": [2],
+          "correctAnswers": [
+            "Faux : Les ILC1 sécrètent de l'IFNγ et du TNFα.",
+            "Faux : Les ILC3 sont impliquées dans la défense contre les pathogènes extracellulaires.",
+            "Vrai : Les cellules NK ont des capacités de cytotoxicité similaires aux lymphocytes T CD8+.",
+            "Faux : Les ILC2 sécrètent des cytokines de type Th2 (IL-4, IL-5, IL-13).",
+            "Faux : Les cellules NK ont des capacités de cytotoxicité via le système granzyme/perforine de façon similaire aux lymphocytes T CD8+."
+          ]
         },
-        
+        {
+          "question": "Concernant les fonctions des ILCs, quelles affirmations sont exactes ?",
+          "options": [
+            "Les ILCs activent principalement les lymphocytes B en présentant des antigènes.",
+            "Les ILCs régulent l'inflammation et participent à la réparation tissulaire.",
+            "Les ILCs interagissent avec leur microenvironnement via des récepteurs à l'antigène.",
+            "Les ILCs ne jouent aucun rôle dans la régulation métabolique.",
+            "Les ILCs sont activées directement par la présence de pathogènes intracellulaires."
+          ],
+          "correctIndices": [1],
+          "correctAnswers": [
+            "Faux : Les ILCs activent localement les fonctions de l'immunité innée et adaptative en orientant la réponse des cellules myéloïdes, en régulant les cellules dendritiques (DCs) et en exprimant des molécules du complexe majeur d’histocompatibilité (CMH) de classe II.",
+            "Vrai : Les ILCs régulent l'inflammation et participent à la réparation tissulaire.",
+            "Faux : Les ILCs interagissent avec leur microenvironnement via des récepteurs à des cytokines.",
+            "Faux : Les ILCs jouent un rôle dans la régulation métabolique, notamment au niveau des tissus adipeux.",
+            "Faux : Les ILCs sont activées par des cytokines produites par des cellules myéloïdes ou non hématopoïétiques."
+          ]
+        },
+          {
+            "question": "Concernant les cellules Natural Killer (NK), quelles affirmations sont exactes ?",
+            "options": [
+              "Les cellules NK nécessitent une immunisation spécifique préalable pour lyser les cellules infectées ou tumorales.",
+              "Les cellules NK se différencient dans le thymus et circulent principalement dans le système lymphatique.",
+              "Les cellules NK subissent une maturation basée sur leur capacité à interagir avec les molécules du CMH de classe I.",
+              "Les cellules NK expriment uniquement des récepteurs inhibiteurs qui reconnaissent les molécules du CMH de classe II.",
+              "Les cellules NK activées sont capables de cytotoxicité directe via la sécrétion de granzymes/perforine et l'induction d'apoptose."
+            ],
+            "correctIndices": [2, 4],
+            "correctAnswers": [
+              "Faux : Les cellules NK peuvent lyser des cellules infectées ou tumorales en l'absence d'immunisation spécifique préalable.",
+              "Faux : Les cellules NK se différencient dans la moelle osseuse et circulent dans le sang, les organes lymphoïdes secondaires et certains tissus.",
+              "Vrai : Les cellules NK subissent une maturation basée sur leur capacité à interagir avec les molécules du CMH de classe I.",
+              "Faux : Les cellules NK expriment à la fois des récepteurs inhibiteurs (reconnaissant le CMH de classe I) et activateurs.",
+              "Vrai : Les NK activées sont capables de cytotoxicité directe via la sécrétion de granzymes/perforine et l'induction d'apoptose."
+            ]
+          },
+          {
+            "question": "Concernant les récepteurs des cellules NK, quelles affirmations sont exactes ?",
+            "options": [
+              "Les récepteurs inhibiteurs (KIR et CD94/NKG2) reconnaissent principalement les molécules du CMH de classe II.",
+              "Les récepteurs activateurs (NCR et NKG2D) reconnaissent les ligands exprimés en cas de stress cellulaire.",
+              "L'interaction des récepteurs inhibiteurs avec leurs ligands induit l'activation de la cellule NK.",
+              "Le récepteur CD16 est impliqué dans la cytotoxicité dépendante des anticorps (ADCC) en se liant au fragment Fab des immunoglobulines.",
+              "L'état d'activation des cellules NK dépend de la balance entre les signaux activateurs et inhibiteurs."
+            ],
+            "correctIndices": [1, 4],
+            "correctAnswers": [
+              "Faux : Les récepteurs inhibiteurs reconnaissent principalement les molécules du CMH de classe I.",
+              "Vrai : Les récepteurs activateurs reconnaissent les ligands exprimés en cas de stress cellulaire.",
+              "Faux : L'interaction des récepteurs inhibiteurs inhibe l'activation de la cellule NK.",
+              "Faux : Le récepteur CD16 se lie au fragment Fc des immunoglobulines.",
+              "Vrai : L'état d'activation des cellules NK dépend de la balance entre les signaux activateurs et inhibiteurs."
+            ]
+          },
             {
-              "question": "Concernant les 3 signaux d’activation des LT CD4+ naïfs, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "Le premier signal est un signal cytokinique au cours duquel on observe une interaction forte du TCR avec un complexe CMH-peptide.",
-                "Le deuxième signal est un signal de costimulation entre le récepteur CD80 du LT et son ligand CD28 sur la CPA.",
-                "Les cytokines impliquées dans le troisième signal sont d’origine paracrine exclusivement, sécrétées par des cellules immunes avoisinantes, des cellules stromales ou des cellules épithéliales.",
-                "L’absence de second signal conduit à un lymphocyte anergique.",
-                "L’IL-2 induit des signaux de survie et de prolifération grâce à sa fixation sur son récepteur IL2RA."
-              ],
-              "correctIndices": [3, 4]
-            },
+            "question": "Concernant les fonctions effectrices des cellules NK, quelles affirmations sont exactes ?",
+            "options": [
+              "Les cellules NK ne sont pas capables de sécréter des cytokines.",
+              "La cytotoxicité directe des cellules NK implique la libération de perforine et de granzymes.",
+              "La cytotoxicité dépendante des anticorps (ADCC) est médiée par le récepteur CD8 des cellules NK.",
+              "Les cellules NK induisent l'apoptose des cellules cibles via l'interaction Fas/Fas Ligand ou TRAIL/TRAIL récepteur.",
+              "Les cellules NK activées participent principalement à la réponse humorale en produisant des anticorps."
+            ],
+            "correctIndices": [2, 3],
+            "correctAnswers": [
+              "Faux : Les cellules NK sécrètent des cytokines telles que l'IFN-γ et le TNF-α.",
+              "Vrai : La cytotoxicité directe des cellules NK implique la libération de perforine et de granzymes.",
+              "Faux : La cytotoxicité dépendante des anticorps est médiée par le récepteur CD16.",
+              "Vrai : Les cellules NK induisent l'apoptose des cellules cibles via l'interaction Fas/Fas Ligand ou TRAIL/TRAIL récepteur.",
+              "Faux : Les cellules NK participent à la régulation de la réponse innée et adaptative, mais ne produisent pas d'anticorps."
+            ]
+          },
             {
-              "question": "Concernant la polarisation des LT activés, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "L’orientation des LT dans une voie de différenciation associée à des spécificités fonctionnelles est permise par les cytokines captées par les LT lors du troisième signal d'activation.",
-                "Les infections parasitaires extracellulaires stimulent une réponse Th2.",
-                "L’IL-12 sécrétée par les CPA induit une différenciation Th1 qui va aboutir à la sécrétion d’IFN-.",
-                "Les infections bactériennes intracellulaires stimulent la réponse Th17.",
-                "La différenciation Th2 est portée par le facteur de transcription Gata-3."
-              ],
-              "correctIndices": [0, 1, 2, 4]
-            },
-            {
-              "question": "Concernant la régulation de l’activation des LT, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "Le LT activé exprime deux molécules inhibitrices qui diminuent toutes deux le signal de costimulation.",
-                "La molécule OX40 est indispensable à l’activation des LT naïfs.",
-                "D’autres couples récepteurs ligands des familles B7 et TNFR peuvent délivrer des signaux activateurs ou inhibiteurs.",
-                "La molécule CTL4 permet de diminuer la signalisation en aval de CD28.",
-                "Un déficit ou un excès des mécanismes de régulation peut conduire à des réactions allergiques à IgE."
-              ],
-              "correctIndices": [0, 2]
-            },
-            {
-              "question": "Concernant les lymphocytes T régulateurs, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "Les lymphocytes T régulateurs représentent la grande majorité des lymphocytes T CD4+.",
-                "Les LT régulateurs naturels sont générés dans le thymus et contrôlent les LT autoréactifs ayant échappé à la sélection négative.",
-                "Les lymphocytes T régulateurs expriment le facteur de transcription FOXP3 spécifique des LTreg.",
-                "Les lymphocytes régulateurs périphériques protègent contre le développement de maladies auto-immunes.",
-                "Les lymphocytes T régulateurs ont une sensibilité accrue à l’IL2 grâce à l’expression constitutive du récepteur CD25."
-              ],
-              "correctIndices": [1, 4]
-            },
-            {
-      "question": "Concernant les fonctions des lymphocytes T régulateurs, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "Les lymphocytes T régulateurs peuvent inhiber les cellules présentatrices d’antigène en exprimant la molécule PD1 qui interagit avec CD80/86 entraînant la production de l’enzyme IDO par les cellules dendritiques qui aboutit à l’apoptose des lymphocytes T effecteurs.",
-                "Les lymphocytes T régulateurs peuvent inhiber les LT CD4+ et les LT CD8+ naïfs ou effecteurs, les cellules NK, les cellules dendritiques et les lymphocytes B.",
-                "En situation tumorale, on observe souvent une diminution des lymphocytes T régulateurs inhibant ainsi le développement d’une réponse immunitaire efficace contre les cellules tumorales.",
-                "Les lymphocytes T régulateurs produisent des cytokines suppressives comme l'IL 10, le TGF et l'IL 35 qui inhibent la différenciation, la prolifération et l’activation des cellules effectrices.",
-                "Les lymphocytes T régulateurs causent l’apoptose des lymphocytes T effecteurs en les privant d’IL 2."
-              ],
-              "correctIndices": [1, 3]
-            },
-              {
-              "question": "Concernant les différenciation des lymphocytes T CD8+ effecteurs, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "Les lymphocytes T CD8 sortant du thymus possèdent une activité cytotoxique spontanée.",
-                "La mise en place de l’activation et de la multiplication des lymphocytes T CD8 nécessite un environnement immunitaire de type Th2.",
-                "Après activation, les lymphocytes T CD8 se multiplient rapidement et intensément en se divisant plus de vingt fois.",
-                "La plupart des lymphocytes T CD8+ effecteurs ont une longue demi vie.",
-                "Dans l’infection par le virus EBV, on observe une intense prolifération des LT CD8 aboutissant dans 80% des cas au syndrome mononucléosique."
-              ],
-              "correctIndices": [2, 4]
-            },
-            {
-              "question": "Concernant la cytotoxicité des lymphocytes T CD8+, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "Le LT CD8 crée une synapse avec la cellule cible conduisant à une redistribution des molécules de costimulation au centre de la synapse et des molécules d’adhésion en périphérie.",
-                "Les mécanismes de cytotoxicité des LT CD8 participent également au contrôle de l’homéostasie T CD8 en induisant la nécrose des LT entre eux.",
-                "Les lymphocytes T CD8 entraînent une lyse cellulaire rapide lui permettant de tuer jusqu’à 100 cellules cibles par jour.",
-                "Le LT CD8 libère le contenu de ses granules cytotoxiques contenant des granzymes qui vont créer des pores dans la membrane plasmique de la cellule cible permettant ainsi la pénétration des perforines.",
-                "Les déficits immunitaires secondaires à des altérations de la formation des synapses, de la libération des granules cytotoxiques ou de l’interaction Fas/FasL peuvent conduire à un syndrome d’activation immunitaire."
-              ],
-              "correctIndices": [0, 4]
-            },
-              {
-              "question": "Concernant l’expansion et la différenciation des lymphocytes T, indiquer la (ou les) proposition(s) exacte(s) :",
-              "options": [
-                "Au pic d’expansion clonale des LT CD8, on observe un phénomène de régulation qui entraîne la contraction des LT CD8.",
-                "La réponse cellulaire T cytotoxique nécessite une à deux semaines à être mise en place.",
-                "Une petite quantité de LT CD4 persiste dans l’organisme et rejoint le stock de lymphocytes T mémoires.",
-                "Les lymphocytes T mémoires centraux sont résidents de manière prolongée dans les tissus et ont un rôle majeur dans la réponse de première ligne au niveau des muqueuses en particulier.",
-                "Le stress métabolique, la compétition pour les cytokines, la disparition des antigènes cibles et l’expression de récepteurs inducteurs d’apoptose contribuent à la régulation de l’apoptose."
-              ],
-              "correctIndices": [0, 1, 2]
-            },
-                {
-                  "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
-                  "options": [
-                    "Les immunoglobulines sont composées uniquement de chaînes lourdes.",
-                    "Les chaînes lourdes et légères sont reliées par des ponts disulfures.",
-                    "Les immunoglobulines sont produites par les macrophages.",
-                    "Il existe 5 isotypes d’immunoglobulines chez l’homme.",
-                    "Les IgM sont toujours monomériques en circulation sanguine."
-                  ],
-                  "correctIndices": [1, 3]
-                },
-                {
-                  "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
-                  "options": [
-                    "Le fragment Fab est responsable des fonctions effectrices des immunoglobulines.",
-                    "Le fragment Fc permet de reconnaître de façon spécifique l’Ag",
-                    "Les IgE jouent un rôle dans les réactions allergiques.",
-                    "La diversité des immunoglobulines est due uniquement aux mutations somatiques.",
-                    "La recombinaison V(D)J concerne uniquement les chaînes lourdes."
-                  ],
-                  "correctIndices": [2]
-                },
-                {
-                  "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
-                  "options": [
-                    "Les boucles CDR sont impliquées dans la reconnaissance de l’antigène.",
-                    "La région constante définit la spécificité antigénique de l’immunoglobuline.",
-                    "La région constante des IgA est adaptée à leur passage à travers les muqueuses.",
-                    "Le récepteur FcRn permet la transcytose des IgA à travers les muqueuses.",
-                    "Les IgE favorisent l’activation des cellules NK dans l’ADCC."
-                  ],
-                  "correctIndices": [0, 2]
-                },
-                  {
-                  "question": "Concernant la structure et fonction des immunoglobulines, indiquer la (ou les) proposition(s) exacte(s) :",
-                  "options": [
-                    "Les IgG sont les plus abondantes dans le sérum humain.",
-                    "Les IgA sont toujours monomériques.",
-                    "Les IgG ont une demi-vie courte.",
-                    "Une réduction du taux d’anticorps circulants, voire leur absence provoque un déficit immunitaire",
-                    "L’administration d’IgG intraveineuses (IVIg) peut être utilisée pour traiter des déficits immunitaires."
-                  ],
-                  "correctIndices": [0, 3, 4]
-                }
-              
- ]
+            "question": "Concernant les lymphocytes iNKT et T γδ, quelles affirmations sont exactes ?",
+            "options": [
+              "Les lymphocytes iNKT et T γδ expriment des récepteurs à l'antigène.",
+              "Les lymphocytes iNKT possèdent des marqueurs phénotypiques communs aux cellules NK et aux lymphocytes T.",
+              "Le TCR des lymphocytes T γδ est composé des chaînes α et β.",
+              "Les lymphocytes iNKT et T γδ sont activés par la présence de molécules du CMH de classe I à la surface des cellules cibles.",
+              "Les lymphocytes iNKT et T γδ sont des cellules majoritaires dans le sang circulant."
+            ],
+            "correctIndices": [0, 1],
+            "correctAnswers": [
+              "Vrai : Les lymphocytes iNKT et T γδ expriment des récepteurs à l'antigène.",
+              "Vrai : Les lymphocytes iNKT possèdent des marqueurs phénotypiques communs aux cellules NK et aux lymphocytes T.",
+              "Faux : Le TCR des lymphocytes T γδ est composé des chaînes γ et δ.",
+              "Faux : Les lymphocytes iNKT et T γδ sont activés par divers ligands, pas uniquement le CMH de classe I.",
+              "Faux : Les lymphocytes iNKT et T γδ sont des cellules minoritaires dans le sang circulant."
+            ]
+          }
+      
+    ]
